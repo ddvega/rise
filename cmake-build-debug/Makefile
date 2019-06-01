@@ -123,6 +123,222 @@ rise_through_the_ranks/fast:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/build
 .PHONY : rise_through_the_ranks/fast
 
+Americas.o: Americas.cpp.o
+
+.PHONY : Americas.o
+
+# target to build an object file
+Americas.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o
+.PHONY : Americas.cpp.o
+
+Americas.i: Americas.cpp.i
+
+.PHONY : Americas.i
+
+# target to preprocess a source file
+Americas.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.i
+.PHONY : Americas.cpp.i
+
+Americas.s: Americas.cpp.s
+
+.PHONY : Americas.s
+
+# target to generate assembly for a file
+Americas.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.s
+.PHONY : Americas.cpp.s
+
+Asia.o: Asia.cpp.o
+
+.PHONY : Asia.o
+
+# target to build an object file
+Asia.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o
+.PHONY : Asia.cpp.o
+
+Asia.i: Asia.cpp.i
+
+.PHONY : Asia.i
+
+# target to preprocess a source file
+Asia.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.i
+.PHONY : Asia.cpp.i
+
+Asia.s: Asia.cpp.s
+
+.PHONY : Asia.s
+
+# target to generate assembly for a file
+Asia.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.s
+.PHONY : Asia.cpp.s
+
+Champions.o: Champions.cpp.o
+
+.PHONY : Champions.o
+
+# target to build an object file
+Champions.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o
+.PHONY : Champions.cpp.o
+
+Champions.i: Champions.cpp.i
+
+.PHONY : Champions.i
+
+# target to preprocess a source file
+Champions.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.i
+.PHONY : Champions.cpp.i
+
+Champions.s: Champions.cpp.s
+
+.PHONY : Champions.s
+
+# target to generate assembly for a file
+Champions.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.s
+.PHONY : Champions.cpp.s
+
+Europe.o: Europe.cpp.o
+
+.PHONY : Europe.o
+
+# target to build an object file
+Europe.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o
+.PHONY : Europe.cpp.o
+
+Europe.i: Europe.cpp.i
+
+.PHONY : Europe.i
+
+# target to preprocess a source file
+Europe.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.i
+.PHONY : Europe.cpp.i
+
+Europe.s: Europe.cpp.s
+
+.PHONY : Europe.s
+
+# target to generate assembly for a file
+Europe.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.s
+.PHONY : Europe.cpp.s
+
+Fighter.o: Fighter.cpp.o
+
+.PHONY : Fighter.o
+
+# target to build an object file
+Fighter.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o
+.PHONY : Fighter.cpp.o
+
+Fighter.i: Fighter.cpp.i
+
+.PHONY : Fighter.i
+
+# target to preprocess a source file
+Fighter.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.i
+.PHONY : Fighter.cpp.i
+
+Fighter.s: Fighter.cpp.s
+
+.PHONY : Fighter.s
+
+# target to generate assembly for a file
+Fighter.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.s
+.PHONY : Fighter.cpp.s
+
+Game.o: Game.cpp.o
+
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+MercenaryShop.o: MercenaryShop.cpp.o
+
+.PHONY : MercenaryShop.o
+
+# target to build an object file
+MercenaryShop.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o
+.PHONY : MercenaryShop.cpp.o
+
+MercenaryShop.i: MercenaryShop.cpp.i
+
+.PHONY : MercenaryShop.i
+
+# target to preprocess a source file
+MercenaryShop.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.i
+.PHONY : MercenaryShop.cpp.i
+
+MercenaryShop.s: MercenaryShop.cpp.s
+
+.PHONY : MercenaryShop.s
+
+# target to generate assembly for a file
+MercenaryShop.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.s
+.PHONY : MercenaryShop.cpp.s
+
+Ninja.o: Ninja.cpp.o
+
+.PHONY : Ninja.o
+
+# target to build an object file
+Ninja.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o
+.PHONY : Ninja.cpp.o
+
+Ninja.i: Ninja.cpp.i
+
+.PHONY : Ninja.i
+
+# target to preprocess a source file
+Ninja.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.i
+.PHONY : Ninja.cpp.i
+
+Ninja.s: Ninja.cpp.s
+
+.PHONY : Ninja.s
+
+# target to generate assembly for a file
+Ninja.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.s
+.PHONY : Ninja.cpp.s
+
 Space.o: Space.cpp.o
 
 .PHONY : Space.o
@@ -149,6 +365,33 @@ Space.s: Space.cpp.s
 Space.cpp.s:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Space.cpp.s
 .PHONY : Space.cpp.s
+
+Validation.o: Validation.cpp.o
+
+.PHONY : Validation.o
+
+# target to build an object file
+Validation.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o
+.PHONY : Validation.cpp.o
+
+Validation.i: Validation.cpp.i
+
+.PHONY : Validation.i
+
+# target to preprocess a source file
+Validation.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.i
+.PHONY : Validation.cpp.i
+
+Validation.s: Validation.cpp.s
+
+.PHONY : Validation.s
+
+# target to generate assembly for a file
+Validation.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.s
+.PHONY : Validation.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +429,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rise_through_the_ranks"
 	@echo "... edit_cache"
+	@echo "... Americas.o"
+	@echo "... Americas.i"
+	@echo "... Americas.s"
+	@echo "... Asia.o"
+	@echo "... Asia.i"
+	@echo "... Asia.s"
+	@echo "... Champions.o"
+	@echo "... Champions.i"
+	@echo "... Champions.s"
+	@echo "... Europe.o"
+	@echo "... Europe.i"
+	@echo "... Europe.s"
+	@echo "... Fighter.o"
+	@echo "... Fighter.i"
+	@echo "... Fighter.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
+	@echo "... MercenaryShop.o"
+	@echo "... MercenaryShop.i"
+	@echo "... MercenaryShop.s"
+	@echo "... Ninja.o"
+	@echo "... Ninja.i"
+	@echo "... Ninja.s"
 	@echo "... Space.o"
 	@echo "... Space.i"
 	@echo "... Space.s"
+	@echo "... Validation.o"
+	@echo "... Validation.i"
+	@echo "... Validation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

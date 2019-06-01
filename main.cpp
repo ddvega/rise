@@ -1,7 +1,10 @@
 #include <iostream>
+#include "Game.hpp"
 
 int main()
 {
-   std::cout << "Hello, World!" << std::endl;
+   srand(time(nullptr));
+   Game s;
+   s.play();
    return 0;
 }

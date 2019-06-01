@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debu
 CMakeFiles/rise_through_the_ranks.dir/all:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/depend
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target rise_through_the_ranks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target rise_through_the_ranks"
 .PHONY : CMakeFiles/rise_through_the_ranks.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/rise_through_the_ranks.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rise_through_the_ranks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rise_through_the_ranks.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/rise_through_the_ranks.dir/rule

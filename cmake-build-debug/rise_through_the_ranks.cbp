@@ -84,10 +84,64 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Americas.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Americas.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Asia.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Asia.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Champions.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Champions.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Europe.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Europe.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Fighter.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Fighter.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Game.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Game.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/MercenaryShop.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/MercenaryShop.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Ninja.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Ninja.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
 		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Space.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
 		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Space.hpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Validation.cpp">
+			<Option target="rise_through_the_ranks"/>
+		</Unit>
+		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/Validation.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
 		<Unit filename="/home/samurai/osu/162/rise-through-the-ranks/main.cpp">
