@@ -70,7 +70,8 @@ void Game::moveMenu()
                 << "\n2. Move Down"
                 << "\n3. Move Left"
                 << "\n4. Move Right"
-                << "\n5. Quit"
+                << "\n5. Enter space"
+                << "\n6. Quit"
                 << std::endl;
 
    }
@@ -78,13 +79,13 @@ void Game::moveMenu()
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
 *******************************************************************************/
-void Game::move(int &exit)
+void Game::move(int &exit, int &enter)
 {
    int choice;
 
    std::cout << "location: " << locator->getLocationName() << std::endl;
    moveMenu();
-   choice = maxMinIntOnly(1, 5);
+   choice = maxMinIntOnly(1, 6);
    if (choice == 1)
    {
       if (locator->getTop() != nullptr)
@@ -113,6 +114,10 @@ void Game::move(int &exit)
          locator = locator->getRight();
       }
    }
+   else if (choice == 5)
+   {
+      enter = 1;
+   }
    else
    {
       exit = 2;
@@ -125,7 +130,7 @@ void Game::move(int &exit)
 void Game::printTeam(std::queue<Fighter *> q)
 {
    int count = 0;
-   std::queue<Fighter *> q2;
+   std::queue < Fighter * > q2;
    q2 = q;
    std::cout << "Your team: ";
    while (!q.empty())
@@ -183,12 +188,11 @@ void Game::mShop()
 *******************************************************************************/
 void Game::asianSpace()
 {
-   tempTeam = asiaTrain->getTeam();
    int bribe = rand() % 200000 + 1;
    int choice;
    std::cout << "You have entered the Asian Territory"
              << "\nA team consisting of: ";
-   asiaTrain->buildTeam(userTeam.size());
+
    printTeam(*tempTeam);
    std::cout << "\n is ready to FIGHT your team"
              << "\nThey demand a payment of "
@@ -215,53 +219,39 @@ void Game::asianSpace()
 void Game::play()
 {
    bank = 100000 + rand() % 1000000 + 10000;
-   int choice = 1;
+   int choice = 1, enterRoom = 0;
    do
    {
       clearScreen(60);
       //setMap();
       printMap();
       printTeam(userTeam);
-      if (locator->getLocationName() == "Central Shop")
+      if (locator->getLocationName() == "Central Shop" && enterRoom == 1)
       {
+         enterRoom = 0;
          mShop();
       }
-      if (locator->getLocationName() == "Asia")
+      if (locator->getLocationName() == "Asia" && enterRoom == 1 && !userTeam
+         .empty())
       {
+         enterRoom = 0;
+         asiaTrain->buildTeam(userTeam.size());
+         tempTeam = asiaTrain->getTeam();
          asianSpace();
+      }
+      else
+      {
+         std::cout << "You may not enter without warriors" << std::endl;
+         enterRoom = 0;
       }
 
       if (choice == 1)
       {
-         move(choice);
+         move(choice, enterRoom);
       }
-      //destroy2dArray(map, xSize);
-
 
    }
    while (choice != 2);
-}
-/*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
-*******************************************************************************/
-Game::~Game()
-{
-   // destroy2dArray(map, xSize);
-   //remove front node until the list is empty
-   while (!userTeam.empty())
-   {
-      delete userTeam.front();
-      userTeam.pop();
-   }
-
-   delete mercenaryShop;
-   delete mercenaryShopLeft;
-   delete mercenaryShopRight;
-   delete asiaTrain;
-   delete americasTrain;
-   delete europeTrain;
-   delete champLeague;
-
 }
 
 /*******************************************************************************
@@ -361,6 +351,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          Fighter *fighterBack = uTeam.front();
          uTeam.push(fighterBack);
          uTeam.pop();
+         //delete enemy.front();
          enemy.pop(); //loser is removed from team2 stack
          t1Points++; //point added to team1
          battle++;//increment total battles
@@ -460,7 +451,7 @@ void Game::printMap()
       count++;
    }
 
-   std::vector<std::pair<int, int>> points;
+   std::vector <std::pair<int, int>> points;
    if (locator->getLocationName() == "Europe")
    {
       //euro zone
@@ -486,6 +477,12 @@ void Game::printMap()
       points.emplace_back(9, 24);
       points.emplace_back(10, 24);
       points.emplace_back(11, 24);
+
+      //set borders
+      for (int i = 0; i < 22; i++)
+      {
+         map[points[i].first][points[i].second] = '#';
+      }
    }
 
    if (locator->getLocationName() == "West Shop")
@@ -513,6 +510,12 @@ void Game::printMap()
       points.emplace_back(19, 24);
       points.emplace_back(17, 3);
       points.emplace_back(17, 24);
+
+      //set borders
+      for (int i = 0; i < 22; i++)
+      {
+         map[points[i].first][points[i].second] = '#';
+      }
    }
 
    if (locator->getLocationName() == "Asia")
@@ -654,6 +657,12 @@ void Game::printMap()
       points.emplace_back(11, 87);
       points.emplace_back(12, 60);
       points.emplace_back(12, 87);
+
+      //set borders
+      for (int i = 0; i < 25; i++)
+      {
+         map[points[i].first][points[i].second] = '#';
+      }
    }
 
    if (locator->getLocationName() == "East Shop")
@@ -681,6 +690,12 @@ void Game::printMap()
       points.emplace_back(6, 72);
       points.emplace_back(6, 75);
       points.emplace_back(6, 78);
+
+      //set borders
+      for (int i = 0; i < 22; i++)
+      {
+         map[points[i].first][points[i].second] = '#';
+      }
    }
 
 
@@ -743,4 +758,37 @@ void Game::printMap()
          std::cout << map[i][c];
    }
    std::cout << std::endl;
+}
+/*******************************************************************************
+**  Function executes attack and defend, randomly deciding who attacks first
+*******************************************************************************/
+/*void Game::destroyTeam(std::queue<Fighter *>*& team)
+{
+   while (!team.empty())
+   {
+      delete team.front();
+      team.pop();
+   }
+}*/
+/*******************************************************************************
+**  Function executes attack and defend, randomly deciding who attacks first
+*******************************************************************************/
+Game::~Game()
+{
+   // destroy2dArray(map, xSize);
+   //remove front node until the list is empty
+   while (!userTeam.empty())
+   {
+      delete userTeam.front();
+      userTeam.pop();
+   }
+
+   delete mercenaryShop;
+   delete mercenaryShopLeft;
+   delete mercenaryShopRight;
+   delete asiaTrain;
+   delete americasTrain;
+   delete europeTrain;
+   delete champLeague;
+
 }

@@ -42,13 +42,14 @@ public:
    void printMap();
    void setSpaces();
    void moveMenu();
-   void move(int &);
+   void move(int &, int&);
    void play();
    void printTeam(std::queue<Fighter *>);
    void mShop();
    void asianSpace();
    void hitFirst(Fighter *one, Fighter *two, int pick);
    void fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy);
+   void destroyTeam(std::queue<Fighter *>*&);
    ~Game();
 
 };

@@ -43,7 +43,7 @@ public:
    virtual Fighter *buyFighter(int choice) = 0;
    virtual void buildTeam(int opponent) = 0;
    virtual std::queue<Fighter *> *getTeam() = 0;
-
+   //virtual void destroyTeam() = 0;
 
 };
 
