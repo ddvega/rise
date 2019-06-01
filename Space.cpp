@@ -11,11 +11,17 @@ Space::Space()
    left = nullptr;
    bottom = nullptr;
    fighter = nullptr;
+   locName = "nowhere";
 }
 
 void Space::setTop(Space *&top)
 {
    this->top = top;
+}
+
+void Space::setLocName(std::string locName)
+{
+   this->locName = locName;
 }
 
 void Space::setRight(Space *&right)

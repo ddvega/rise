@@ -29,6 +29,7 @@ public:
    void setRight(Space *&);
    void setLeft(Space *&);
    void setBottom(Space *&);
+   void setLocName(std::string);
 
    //getters
    Space *getTop();
