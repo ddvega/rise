@@ -18,4 +18,6 @@ Fighter *Europe::buyFighter(int choice) {}
 
 void Europe::buildTeam(int opponent) {}
 std::queue<Fighter *> *Europe::getTeam() {}
+void Europe::destroyTeam() {}
+
 

@@ -19,6 +19,8 @@ public:
    Fighter *buyFighter(int choice) override;
    ~MercenaryShop() override;
    std::queue<Fighter *> *getTeam() override;
+   void destroyTeam();
+
 
 };
 

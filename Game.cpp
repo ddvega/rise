@@ -234,6 +234,7 @@ void Game::play()
       if (locator->getLocationName() == "Asia" && enterRoom == 1 && !userTeam
          .empty())
       {
+         asiaTrain->destroyTeam();
          enterRoom = 0;
          asiaTrain->buildTeam(userTeam.size());
          tempTeam = asiaTrain->getTeam();
@@ -395,33 +396,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
    printTeam(userTeam);
 
 }
-/*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
-*******************************************************************************/
-/*void Game::setMap()
-{
-   map = new char*[xSize];
-   for(int i = 0; i < xSize; i++)
-   {
-      map[i] = new char[ySize];
-   }
 
-   for (int x=0; x<xSize; x++){
-      for (int y=0; y<ySize; y++){
-         map[x][0] = '|';
-         map[x][ySize-1] = '|';
-         map[0][y] = '-';
-         map[xSize-1][y] = '-';
-      }
-   }
-   //set the white spaces
-   for (int x=1; x<xSize-1; x++){
-      for (int y=1; y<ySize-1; y++){
-         map[x][y] = ' ';
-      }
-   }
-
-}*/
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
 *******************************************************************************/

@@ -18,4 +18,5 @@ Fighter *Americas::buyFighter(int choice) {}
 
 void Americas::buildTeam(int opponent) {}
 std::queue<Fighter *> *Americas::getTeam() {}
+void Americas::destroyTeam() {}
 

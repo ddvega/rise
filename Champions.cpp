@@ -15,3 +15,5 @@ Champions::~Champions() {}
 
 void Champions::buildTeam(int opponent) {}
 std::queue<Fighter *> *Champions::getTeam() {}
+void Champions::destroyTeam() {}
+

@@ -18,6 +18,8 @@ public:
    void buildTeam(int opponent) override;
    Fighter *buyFighter(int choice) override;
    std::queue<Fighter *> *getTeam() override;
+   void destroyTeam();
+
 
 };
 

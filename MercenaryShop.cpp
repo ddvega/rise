@@ -25,5 +25,7 @@ MercenaryShop::~MercenaryShop() {}
 void MercenaryShop::buildTeam(int opponent) {}
 
 std::queue<Fighter *> *MercenaryShop::getTeam() {}
+void MercenaryShop::destroyTeam() {}
+
 
 

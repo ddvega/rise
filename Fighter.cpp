@@ -40,7 +40,7 @@ int Fighter::getArmor()
 *******************************************************************************/
 void Fighter::harden()
 {
-   //strength += 1;
+   strength += 5;
    //armor += 1;
 
 }

@@ -11,7 +11,7 @@ Ninja::Ninja()
 {
    name = "Ninja";
    armor = 3;
-   strength = 12;
+   strength = 25;
    killed = false;
 }
 
@@ -20,7 +20,7 @@ Ninja::Ninja()
 *******************************************************************************/
 int Ninja::attackDice()
 {
-   return rand() % 6 + 1;
+   return rand() % 20 + 1;
 }
 
 /*******************************************************************************
@@ -28,8 +28,8 @@ int Ninja::attackDice()
 *******************************************************************************/
 int Ninja::attack()
 {
-   //Ninja attacks with 2 6 sided die
-   return attackDice() + attackDice();
+   //Ninja attacks with a 20 sided die
+   return attackDice();
 }
 
 /*******************************************************************************
@@ -37,7 +37,7 @@ int Ninja::attack()
 *******************************************************************************/
 int Ninja::defendDice()
 {
-   return rand() % 6 + 1;
+   return rand() % 12 + 1;
 }
 
 /*******************************************************************************
@@ -47,7 +47,7 @@ int Ninja::defendDice()
 void Ninja::defend(int pain)
 {
    //Ninja defends with 2 6sided die
-   int counter = defendDice() + defendDice();
+   int counter = defendDice();
 
    //subtract defense roll and armor from pain
    pain -= (counter + armor);
