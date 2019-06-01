@@ -15,6 +15,7 @@
 #include "Fighter.hpp"
 #include "Ninja.hpp"
 #include "Validation.hpp"
+#include <vector>
 class Game
 {
 

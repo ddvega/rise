@@ -433,8 +433,203 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
 *******************************************************************************/
 void Game::printMap()
 {
+   std::vector<std::pair<int, int>> points;
+   points.emplace_back(8, 3);
+   points.emplace_back(12, 3);
+   points.emplace_back(16, 3);
+   points.emplace_back(20, 3);
+   points.emplace_back(8, 24);
+   points.emplace_back(12, 24);
+   points.emplace_back(16, 24);
+   points.emplace_back(20, 24);
+   points.emplace_back(9, 30);
+   points.emplace_back(13, 30);
+   points.emplace_back(9, 51);
+   points.emplace_back(13, 51);
+   points.emplace_back(13, 60);
+   points.emplace_back(9, 60);
+   points.emplace_back(6, 60);
+   points.emplace_back(2, 60);
+   points.emplace_back(6, 81);
+   points.emplace_back(2, 81);
+   points.emplace_back(13, 87);
+   points.emplace_back(9, 87);
+   points.emplace_back(20, 42);
+   points.emplace_back(16, 42);
+   points.emplace_back(20, 75);
+   points.emplace_back(16, 75);
+   points.emplace_back(5, 27);
+   points.emplace_back(1, 27);
+   points.emplace_back(5, 48);
+   points.emplace_back(1, 30);
+   points.emplace_back(1, 33);
+   points.emplace_back(1, 36);
+   points.emplace_back(1, 39);
+   points.emplace_back(1, 42);
+   points.emplace_back(1, 45);
+   points.emplace_back(1, 48);
+   points.emplace_back(2, 27);
+   points.emplace_back(2, 48);
+   points.emplace_back(2, 63);
+   points.emplace_back(2, 66);
+   points.emplace_back(2, 69);
+   points.emplace_back(2, 72);
+   points.emplace_back(2, 75);
+   points.emplace_back(2, 78);
+   points.emplace_back(3, 27);
+   points.emplace_back(3, 48);
+   points.emplace_back(3, 60);
+   points.emplace_back(3, 81);
+   points.emplace_back(4, 27);
+   points.emplace_back(4, 48);
+   points.emplace_back(4, 60);
+   points.emplace_back(4, 81);
+   points.emplace_back(5, 30);
+   points.emplace_back(5, 33);
+   points.emplace_back(5, 36);
+   points.emplace_back(5, 39);
+   points.emplace_back(5, 42);
+   points.emplace_back(5, 45);
+   points.emplace_back(5, 60);
+   points.emplace_back(5, 81);
+   points.emplace_back(6, 63);
+   points.emplace_back(6, 66);
+   points.emplace_back(6, 69);
+   points.emplace_back(6, 72);
+   points.emplace_back(6, 75);
+   points.emplace_back(6, 78);
+   points.emplace_back(8, 6);
+   points.emplace_back(8, 9);
+   points.emplace_back(8, 12);
+   points.emplace_back(8, 15);
+   points.emplace_back(8, 18);
+   points.emplace_back(8, 21);
+   points.emplace_back(9, 3);
+   points.emplace_back(9, 24);
+   points.emplace_back(9, 33);
+   points.emplace_back(9, 36);
+   points.emplace_back(9, 39);
+   points.emplace_back(9, 42);
+   points.emplace_back(9, 45);
+   points.emplace_back(9, 48);
+   points.emplace_back(9, 63);
+   points.emplace_back(9, 66);
+   points.emplace_back(9, 69);
+   points.emplace_back(9, 72);
+   points.emplace_back(9, 75);
+   points.emplace_back(9, 78);
+   points.emplace_back(9, 81);
+   points.emplace_back(9, 84);
+   points.emplace_back(10, 3);
+   points.emplace_back(10, 24);
+   points.emplace_back(10, 30);
+   points.emplace_back(10, 51);
+   points.emplace_back(10, 60);
+   points.emplace_back(10, 87);
+   points.emplace_back(11, 3);
+   points.emplace_back(11, 24);
+   points.emplace_back(11, 30);
+   points.emplace_back(11, 51);
+   points.emplace_back(11, 60);
+   points.emplace_back(11, 87);
+   points.emplace_back(12, 6);
+   points.emplace_back(12, 9);
+   points.emplace_back(12, 12);
+   points.emplace_back(12, 15);
+   points.emplace_back(12, 18);
+   points.emplace_back(12, 21);
+   points.emplace_back(12, 30);
+   points.emplace_back(12, 51);
+   points.emplace_back(12, 60);
+   points.emplace_back(12, 87);
+   points.emplace_back(13, 33);
+   points.emplace_back(13, 36);
+   points.emplace_back(13, 39);
+   points.emplace_back(13, 42);
+   points.emplace_back(13, 45);
+   points.emplace_back(13, 48);
+   points.emplace_back(13, 63);
+   points.emplace_back(13, 66);
+   points.emplace_back(13, 69);
+   points.emplace_back(13, 72);
+   points.emplace_back(13, 75);
+   points.emplace_back(13, 78);
+   points.emplace_back(13, 81);
+   points.emplace_back(13, 84);
+   points.emplace_back(16, 6);
+   points.emplace_back(16, 9);
+   points.emplace_back(16, 12);
+   points.emplace_back(16, 15);
+   points.emplace_back(16, 18);
+   points.emplace_back(16, 21);
+   points.emplace_back(16, 45);
+   points.emplace_back(16, 48);
+   points.emplace_back(16, 51);
+   points.emplace_back(16, 54);
+   points.emplace_back(16, 57);
+   points.emplace_back(16, 60);
+   points.emplace_back(16, 63);
+   points.emplace_back(16, 66);
+   points.emplace_back(16, 69);
+   points.emplace_back(16, 72);
+   points.emplace_back(17, 3);
+   points.emplace_back(17, 24);
+   points.emplace_back(17, 42);
+   points.emplace_back(17, 75);
+   points.emplace_back(18, 3);
+   points.emplace_back(18, 24);
+   points.emplace_back(18, 42);
+   points.emplace_back(18, 75);
+   points.emplace_back(19, 3);
+   points.emplace_back(19, 24);
+   points.emplace_back(19, 42);
+   points.emplace_back(19, 75);
+   points.emplace_back(20, 6);
+   points.emplace_back(20, 9);
+   points.emplace_back(20, 12);
+   points.emplace_back(20, 15);
+   points.emplace_back(20, 18);
+   points.emplace_back(20, 21);
+   points.emplace_back(20, 45);
+   points.emplace_back(20, 48);
+   points.emplace_back(20, 51);
+   points.emplace_back(20, 54);
+   points.emplace_back(20, 57);
+   points.emplace_back(20, 60);
+   points.emplace_back(20, 63);
+   points.emplace_back(20, 66);
+   points.emplace_back(20, 69);
+   points.emplace_back(20, 72);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    int xSize = 24;
-   int ySize = 84;
+   int ySize = 90;
+   int count = 0;
    char map[xSize][ySize];
    for (int x = 0; x < xSize; x++)
    {
@@ -453,8 +648,48 @@ void Game::printMap()
       {
          map[x][y] = ' ';
       }
+      count++;
    }
 
+   //set borders
+
+   for (int i = 0; i < points.size(); i++)
+   {
+      map[points[i].first][points[i].second] = '*';
+   }
+
+   //print labels
+
+   map[18][9] = 'S';
+   map[18][12] = 'H';
+   map[18][15] = 'O';
+   map[18][18] = 'P';
+
+   map[11][36] = 'S';
+   map[11][39] = 'H';
+   map[11][42] = 'O';
+   map[11][45] = 'P';
+
+   map[4][66] = 'S';
+   map[4][69] = 'H';
+   map[4][72] = 'O';
+   map[4][75] = 'P';
+
+   map[18][48] = 'A';
+   map[18][51] = 'M';
+   map[18][54] = 'E';
+   map[18][57] = 'R';
+   map[18][60] = 'I';
+   map[18][63] = 'C';
+   map[18][66] = 'A';
+   map[18][69] = 'S';
+
+
+
+
+
+
+   //print map
    for (int i = 0; i < xSize; i++)
    {
       std::cout << std::endl;
