@@ -124,6 +124,7 @@ void Game::printTeam(std::queue<Fighter *> q)
    int count = 0;
    std::queue<Fighter *> q2;
    q2 = q;
+   std::cout << "Your team: ";
    while (!q.empty())
    {
       count++;
@@ -162,8 +163,8 @@ void Game::mShop()
             for (int i = 0; i < quantity; i++)
             {
                userTeam.push(locator->buyFighter(answer));
-               std::cout << "Your Team: ";
-               printTeam(userTeam);
+               //std::cout << "Your Team: ";
+               //printTeam(userTeam);
             }
          }
          else
@@ -217,6 +218,7 @@ void Game::play()
       clearScreen(60);
       //setMap();
       printMap();
+      printTeam(userTeam);
       if (locator->getLocationName() == "Mercenary Shop")
       {
          mShop();
@@ -297,6 +299,8 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
    int battle = 1, t1Points = 0, t2Points = 0, rounds = 0;
    int money = 0;
 
+   std::cout << "\nEnemy Team Size: " << enemy.size() << std::endl;
+   std::cout << "Your Team Size: " << userTeam.size() << std::endl;
    do //while loop stops when one team runs out of fighters
    {
       //round consists of an attack and counter attack. Who attacks first is
@@ -392,6 +396,9 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
              << "\nNew Bank Balance: "
              << bank
              << std::endl;
+   std::cout << "\nEnemy Team Size: " << enemy.size() << std::endl;
+   std::cout << "Your Team Size: " << userTeam.size() << std::endl;
+   printTeam(userTeam);
 
 }
 /*******************************************************************************

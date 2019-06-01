@@ -10,7 +10,7 @@
 Ninja::Ninja()
 {
    name = "Ninja";
-   armor = 0;
+   armor = 3;
    strength = 12;
    killed = false;
 }
