@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 #include "Fighter.hpp"
-#include "Ninja.hpp"
+#include "Gru.hpp"
 #include <queue>
 
 class Space
@@ -19,6 +19,7 @@ protected:
    Space *bottom;
    std::string locName;
    Fighter *fighter;
+   int key;
 public:
    //constructor and destructor
    Space();
@@ -30,6 +31,8 @@ public:
    void setLeft(Space *&);
    void setBottom(Space *&);
    void setLocName(std::string);
+   void setKey(int);
+   int getKey();
 
    //getters
    Space *getTop();

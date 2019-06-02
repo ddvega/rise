@@ -63,6 +63,15 @@ Space *Space::getBottom()
 {
    return bottom;
 }
+void Space::setKey(int key)
+{
+   this->key = key;
+}
+
+int Space::getKey()
+{
+   return key;
+}
 
 //void Space::buildTeam() {}
 

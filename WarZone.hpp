@@ -2,19 +2,19 @@
 // Created by samurai on 5/31/19.
 //
 
-#ifndef RISE_THROUGH_THE_RANKS__ASIA_HPP
-#define RISE_THROUGH_THE_RANKS__ASIA_HPP
+#ifndef RISE_THROUGH_THE_RANKS__WARZONE_HPP
+#define RISE_THROUGH_THE_RANKS__WARZONE_HPP
 #include "Space.hpp"
 #include <queue>
 
-class Asia : public Space
+class WarZone : public Space
 {
 protected:
    std::queue<Fighter *> asiaTeam;
 
 public:
-   Asia();
-   ~Asia() override;
+   WarZone();
+   ~WarZone() override;
    void buildTeam(int opponent) override;
    Fighter *buyFighter(int choice) override;
    std::queue<Fighter *> *getTeam() override;
@@ -23,4 +23,4 @@ public:
 
 };
 
-#endif //RISE_THROUGH_THE_RANKS__ASIA_HPP
+#endif //RISE_THROUGH_THE_RANKS__WARZONE_HPP

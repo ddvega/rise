@@ -2,37 +2,38 @@
 // Created by samurai on 5/31/19.
 //
 
-#include "Asia.hpp"
+#include "WarZone.hpp"
 
-Asia::Asia()
+WarZone::WarZone()
 {
    locName = "Asia";
+   key = 1;
 }
 
-Fighter *Asia::buyFighter(int choice) {}
+Fighter *WarZone::buyFighter(int choice) {}
 
-Asia::~Asia()
+WarZone::~WarZone()
 {
    destroyTeam();
 }
 
-void Asia::buildTeam(int opponent)
+void WarZone::buildTeam(int opponent)
 {
    int teamSize = (rand() % opponent + 1) * 1.25;
    for (int i = 0; i < teamSize; i++)
    {
-      fighter = new Ninja;
+      fighter = new Gru;
       asiaTeam.push(fighter);
       fighter = nullptr;
    }
 }
 
-std::queue<Fighter *> *Asia::getTeam()
+std::queue<Fighter *> *WarZone::getTeam()
 {
    return &asiaTeam;
 }
 
-void Asia::destroyTeam()
+void WarZone::destroyTeam()
 {
    //remove front node until the list is empty
    while (!asiaTeam.empty())

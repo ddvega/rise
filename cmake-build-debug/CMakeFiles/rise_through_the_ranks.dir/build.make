@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/73/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/73/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/davidsan/162/rise-through-the-ranks
+CMAKE_SOURCE_DIR = /home/samurai/osu/162/rise-through-the-ranks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/davidsan/162/rise-through-the-ranks/cmake-build-debug
+CMAKE_BINARY_DIR = /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rise_through_the_ranks.dir/depend.make
@@ -59,178 +59,193 @@ include CMakeFiles/rise_through_the_ranks.dir/flags.make
 
 CMakeFiles/rise_through_the_ranks.dir/main.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/main.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/main.cpp.o -c /home/davidsan/162/rise-through-the-ranks/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/main.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/main.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/main.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/main.cpp > CMakeFiles/rise_through_the_ranks.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/main.cpp > CMakeFiles/rise_through_the_ranks.dir/main.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/main.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/main.cpp -o CMakeFiles/rise_through_the_ranks.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/main.cpp -o CMakeFiles/rise_through_the_ranks.dir/main.cpp.s
 
 CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o: ../Space.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Space.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Space.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/Space.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Space.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Space.cpp > CMakeFiles/rise_through_the_ranks.dir/Space.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Space.cpp > CMakeFiles/rise_through_the_ranks.dir/Space.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/Space.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Space.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Space.cpp -o CMakeFiles/rise_through_the_ranks.dir/Space.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Space.cpp -o CMakeFiles/rise_through_the_ranks.dir/Space.cpp.s
 
-CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
-CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o: ../Asia.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Asia.cpp
+CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
+CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o: ../WarZone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/WarZone.cpp
 
-CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Asia.cpp > CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.i
+CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/WarZone.cpp > CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.i
 
-CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Asia.cpp -o CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.s
+CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/WarZone.cpp -o CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.s
 
 CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Game.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Game.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Game.cpp > CMakeFiles/rise_through_the_ranks.dir/Game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Game.cpp > CMakeFiles/rise_through_the_ranks.dir/Game.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Game.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Game.cpp -o CMakeFiles/rise_through_the_ranks.dir/Game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Game.cpp -o CMakeFiles/rise_through_the_ranks.dir/Game.cpp.s
 
 CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o: ../Fighter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Fighter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Fighter.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Fighter.cpp > CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Fighter.cpp > CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Fighter.cpp -o CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Fighter.cpp -o CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.s
 
-CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
-CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o: ../Ninja.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Ninja.cpp
+CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
+CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o: ../Gru.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Gru.cpp
 
-CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Ninja.cpp > CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.i
+CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Gru.cpp > CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.i
 
-CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Ninja.cpp -o CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.s
+CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Gru.cpp -o CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.s
 
 CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o: ../MercenaryShop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o -c /home/davidsan/162/rise-through-the-ranks/MercenaryShop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/MercenaryShop.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/MercenaryShop.cpp > CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/MercenaryShop.cpp > CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/MercenaryShop.cpp -o CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/MercenaryShop.cpp -o CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.s
 
 CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o: ../Validation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Validation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Validation.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Validation.cpp > CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Validation.cpp > CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Validation.cpp -o CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.s
-
-CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
-CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o: ../Americas.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Americas.cpp
-
-CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Americas.cpp > CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.i
-
-CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Americas.cpp -o CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.s
-
-CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
-CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o: ../Europe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Europe.cpp
-
-CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Europe.cpp > CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.i
-
-CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Europe.cpp -o CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Validation.cpp -o CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.s
 
 CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
 CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o: ../Champions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o"
-	/usr/lib64/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o -c /home/davidsan/162/rise-through-the-ranks/Champions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Champions.cpp
 
 CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davidsan/162/rise-through-the-ranks/Champions.cpp > CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Champions.cpp > CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.i
 
 CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davidsan/162/rise-through-the-ranks/Champions.cpp -o CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Champions.cpp -o CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.s
+
+CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
+CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o: ../ChineseSop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/ChineseSop.cpp
+
+CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/ChineseSop.cpp > CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.i
+
+CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/ChineseSop.cpp -o CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.s
+
+CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
+CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o: ../Sas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Sas.cpp
+
+CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Sas.cpp > CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.i
+
+CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Sas.cpp -o CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.s
+
+CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o: CMakeFiles/rise_through_the_ranks.dir/flags.make
+CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o: ../Seal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o -c /home/samurai/osu/162/rise-through-the-ranks/Seal.cpp
+
+CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samurai/osu/162/rise-through-the-ranks/Seal.cpp > CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.i
+
+CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samurai/osu/162/rise-through-the-ranks/Seal.cpp -o CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.s
 
 # Object files for target rise_through_the_ranks
 rise_through_the_ranks_OBJECTS = \
 "CMakeFiles/rise_through_the_ranks.dir/main.cpp.o" \
 "CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o" \
-"CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o" \
+"CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o" \
 "CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o" \
 "CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o" \
-"CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o" \
+"CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o" \
 "CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o" \
 "CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o" \
-"CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o" \
-"CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o" \
-"CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o"
+"CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o" \
+"CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o" \
+"CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o" \
+"CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o"
 
 # External object files for target rise_through_the_ranks
 rise_through_the_ranks_EXTERNAL_OBJECTS =
 
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/main.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o
-rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o
+rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o
-rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o
+rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o
-rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o
-rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o
+rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o
+rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o
+rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/build.make
 rise_through_the_ranks: CMakeFiles/rise_through_the_ranks.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable rise_through_the_ranks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable rise_through_the_ranks"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rise_through_the_ranks.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -243,6 +258,6 @@ CMakeFiles/rise_through_the_ranks.dir/clean:
 .PHONY : CMakeFiles/rise_through_the_ranks.dir/clean
 
 CMakeFiles/rise_through_the_ranks.dir/depend:
-	cd /home/davidsan/162/rise-through-the-ranks/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/davidsan/162/rise-through-the-ranks /home/davidsan/162/rise-through-the-ranks /home/davidsan/162/rise-through-the-ranks/cmake-build-debug /home/davidsan/162/rise-through-the-ranks/cmake-build-debug /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samurai/osu/162/rise-through-the-ranks /home/samurai/osu/162/rise-through-the-ranks /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rise_through_the_ranks.dir/depend
 

@@ -7,7 +7,10 @@
 
 #include "Space.hpp"
 #include "Fighter.hpp"
-#include "Ninja.hpp"
+#include "Gru.hpp"
+#include "ChineseSop.hpp"
+#include "Sas.hpp"
+#include "Seal.hpp"
 #include "Validation.hpp"
 
 class MercenaryShop : public Space

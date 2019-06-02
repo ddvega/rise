@@ -2,14 +2,14 @@
 // Created by samurai on 5/31/19.
 //
 
-#include "Ninja.hpp"
+#include "Gru.hpp"
 
 /*******************************************************************************
 **  Default constructor for derived class
 *******************************************************************************/
-Ninja::Ninja()
+Gru::Gru()
 {
-   name = "Ninja";
+   name = "Gru";
    armor = 3;
    strength = 25;
    killed = false;
@@ -18,7 +18,7 @@ Ninja::Ninja()
 /*******************************************************************************
 **  Returns a random number within range of the die. Die is used in attack.
 *******************************************************************************/
-int Ninja::attackDice()
+int Gru::attackDice()
 {
    return rand() % 20 + 1;
 }
@@ -26,16 +26,16 @@ int Ninja::attackDice()
 /*******************************************************************************
 **  Uses attackDice function to inflict damage on the opponent
 *******************************************************************************/
-int Ninja::attack()
+int Gru::attack()
 {
-   //Ninja attacks with a 20 sided die
+   //Gru attacks with a 20 sided die
    return attackDice();
 }
 
 /*******************************************************************************
 **  Returns a random number within range of the die. Die is used in defense.
 *******************************************************************************/
-int Ninja::defendDice()
+int Gru::defendDice()
 {
    return rand() % 12 + 1;
 }
@@ -44,9 +44,9 @@ int Ninja::defendDice()
 **  Uses defendDice to supress damage done by opponents attack.  Additional
  *  traits provide added protection.
 *******************************************************************************/
-void Ninja::defend(int pain)
+void Gru::defend(int pain)
 {
-   //Ninja defends with 2 6sided die
+   //Gru defends with 2 6sided die
    int counter = defendDice();
 
    //subtract defense roll and armor from pain
@@ -68,4 +68,4 @@ void Ninja::defend(int pain)
 /*******************************************************************************
 **  Default destructor
 *******************************************************************************/
-Ninja::~Ninja() {}
+Gru::~Gru() {}

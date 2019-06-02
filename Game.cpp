@@ -9,6 +9,7 @@ Game::Game()
    bank = 0;
    setSpaces();
    locator = mercenaryShop;
+   keys = 0;
 }
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
@@ -16,11 +17,11 @@ Game::Game()
 void Game::setSpaces()
 {
    mercenaryShop = new MercenaryShop;
-   west = new Europe;
-   east = new Asia;
-   asiaTrain = new Asia;
-   americasTrain = new Americas;
-   europeTrain = new Europe;
+   west = new WarZone;
+   east = new WarZone;
+   asiaTrain = new WarZone;
+   americasTrain = new WarZone;
+   europeTrain = new WarZone;
    champLeague = new Champions;
 
    mercenaryShop->setBottom(americasTrain);
@@ -45,16 +46,19 @@ void Game::setSpaces()
    americasTrain->setTop(mercenaryShop);
    americasTrain->setRight(champLeague);
    americasTrain->setLeft(west);
+   americasTrain->setLocName("Americas");
 
    europeTrain->setBottom(west);
    europeTrain->setTop(asiaTrain);
    europeTrain->setRight(mercenaryShop);
    europeTrain->setLeft(west);
+   europeTrain->setLocName("Europe");
 
    champLeague->setBottom(americasTrain);
    champLeague->setTop(east);
    champLeague->setRight(east);
    champLeague->setLeft(mercenaryShop);
+   champLeague->setLocName("Champion's League");
 
 }
 /*******************************************************************************
@@ -64,6 +68,7 @@ void Game::moveMenu()
 {
    {
       std::cout << "You're currently in " << locator->getLocationName()
+                << "\nKey's in room: " << locator->getKey()
                 << "\n\nNavigation Keys"
                 << "\n[w] Move Up [s] Move Down [a] Move Left [d] Move Right"
                 << "\n[e] Enter space"
@@ -148,29 +153,49 @@ void Game::printTeam(std::queue<Fighter *> q)
 *******************************************************************************/
 void Game::mShop()
 {
-   int answer, quantity;
+   int answer, quantity, cost;
    do
    {
+      clearScreen(50);
       std::cout << "Bank Balance: " << bank
-                << "\nWelcome to the Mercenary Shop"
-                << "\nPlease select the fighter you want to purchase"
-                << "\n1. Ninja $10,000"
-                << "\n2. Leave Fighter room"
+                << "\nKeys: " << keys
+                << "\nTeam size: " << userTeam.size() << " warriors"
+                << "\n\n\nWelcome to the Mercenary Shop"
+                << "\n\nPlease select the fighter you want to purchase"
+                << "\n1. GRU Spetsnaz Solder $10,000"
+                << "\n2. Chinese Special Operative $20,000"
+                << "\n3. SAS operative $ 50,000"
+                << "\n4. Navy Seal $100,000"
+                << "\n5. Leave War Shop"
                 << std::endl;
-      answer = maxMinIntOnly(1, 2);
-
+      answer = maxMinIntOnly(1, 5);
       if (answer == 1)
+      {
+         cost = 10000;
+      }
+      if (answer == 2)
+      {
+         cost = 20000;
+      }
+      if (answer == 3)
+      {
+         cost = 50000;
+      }
+      if (answer == 4)
+      {
+         cost = 100000;
+      }
+
+      if (answer != 5)
       {
          std::cout << "Quantity: ";
          quantity = maxMinIntOnly(1, 100);
-         if (bank >= 10000 * quantity)
+         if (bank >= cost * quantity)
          {
-            bank -= 10000 * quantity;
+            bank -= cost * quantity;
             for (int i = 0; i < quantity; i++)
             {
                userTeam.push(locator->buyFighter(answer));
-               //std::cout << "Your Team: ";
-               //printTeam(userTeam);
             }
          }
          else
@@ -179,16 +204,16 @@ void Game::mShop()
          }
       }
    }
-   while (answer == 1);
+   while (answer != 5);
 }
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
 *******************************************************************************/
-void Game::asianSpace()
+void Game::warSpace()
 {
    int bribe = rand() % 200000 + 1;
    int choice;
-   std::cout << "You have entered the Asian Territory"
+   std::cout << "You have entered a war zone"
              << "\nA team of " << tempTeam->size() << " warriors awaits"
              << "\nYour team of " << userTeam.size() << " warriors"
              << std::endl;
@@ -198,11 +223,11 @@ void Game::asianSpace()
              << "\nThey demand a payment of "
              << bribe
              << " to pass without fighting"
-             << "\n1. Pay fee"
-             << "\n2. Fight"
+             << "\n[p] Pay fee"
+             << "\n[f] Fight"
              << std::endl;
-   choice = maxMinIntOnly(1, 2);
-   if (choice == 1)
+   choice = getch("pf");
+   if (choice == 'p')
    {
       bank -= bribe;
    }
@@ -228,15 +253,37 @@ void Game::play()
       if (locator->getLocationName() == "War Shop" && enterRoom == 1)
       {
          clearScreen(60);
-         printMap();
-         //printTeam(userTeam);
+         //printMap();
          enterRoom = 0;
          mShop();
       }
-      if (locator->getLocationName() == "Asia" && enterRoom == 1)
+      else if (locator->getLocationName() == "Champion's League" && enterRoom
+         == 1)
+      {
+         if (keys == 5)
+         {
+            clearScreen(60);
+            //printMap();
+            enterRoom = 0;
+            //build functionality
+         }
+         else
+         {
+            std::cout << "You're not powerful enough to fight the champion"
+                      << "\nYou must have 5 keys to enter"
+                      << "\nEnter [c] to continue"
+                      << std::endl;
+            getch("cC");
+            enterRoom = 0;
+         }
+      }
+
+      else if (locator->getLocationName() != "War Shop" &&
+         locator->getLocationName() != "Champion's League" && enterRoom
+         == 1)
       {
          clearScreen(60);
-         printMap();
+         //printMap();
          //printTeam(userTeam);
          if (!userTeam.empty())
          {
@@ -245,18 +292,16 @@ void Game::play()
             enterRoom = 0;
             asiaTrain->buildTeam(userTeam.size());
             tempTeam = asiaTrain->getTeam();
-            asianSpace();
-            //std::cout << "You may not enter without warriors" << std::endl;
-            std::cout
-               << "hit ENTER to continue";            //maxMinIntOnly(1,2);
-            std::cin.get();
+            warSpace();
+            std::cout << "Enter [c] to continue";
+            getch("cC");
          }
          else
          {
             //clearScreen(60);
             std::cout << "You may not enter without warriors" << std::endl;
-            std::cout << "hit ENTER to continue";
-            std::cin.get();
+            std::cout << "Enter [c] to continue";
+            getch("cC");
             enterRoom = 0;
          }
       }
@@ -266,7 +311,7 @@ void Game::play()
          clearScreen(60);
          printMap();
          std::cout << "Bank Balance: " << bank << std::endl;
-         //printTeam(userTeam);
+         std::cout << "Keys: " << keys << std::endl;
          std::cout << "Team size: " << userTeam.size() << " warriors" <<
                    std::endl;
          move(choice, enterRoom);
@@ -358,7 +403,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          t2Points++; //point added to team2
          battle++;//increment total battles
          rounds = 0;//reset rounds
-         money -= 2500;
+         money -= 5000;
       }
 
       //team 2 fighter killed, team 1 wins battle
@@ -382,7 +427,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          t1Points++; //point added to team1
          battle++;//increment total battles
          rounds = 0;//reset rounds
-         money += 10000;
+         money += 5000;
       }
 
 
@@ -392,20 +437,31 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          //tie game
          if (t1Points == t2Points)
          {
-            std::cout << "\nTeam A and Team B Tie! " << t2Points << " to "
+            std::cout << "\nYou and Enemy team Tie! " << t2Points
+                      << " to "
                       << t1Points << std::endl << std::endl;
          }
             //team B wins
          else if (t2Points > t1Points)
          {
-            std::cout << "\nTeam B Wins " << t2Points << " to " << t1Points
+            std::cout << "\nEnemy Wins " << t2Points << " to " << t1Points
                       << std::endl << std::endl;
          }
             //team A wins
          else if (t1Points > t2Points)
          {
-            std::cout << "\nTeam A Wins " << t1Points << " to " << t2Points
+            std::cout << "\nYou Win " << t1Points << " to " << t2Points
                       << std::endl << std::endl;
+            if (locator->getKey() == 1)
+            {
+               keys++;
+               locator->setKey(0);
+            }
+            else
+            {
+               std::cout << "You already took the key from this zone"
+                         << std::endl;
+            }
          }
       }
    }

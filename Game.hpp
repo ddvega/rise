@@ -8,12 +8,10 @@
 #include <queue>
 #include "Space.hpp"
 #include "MercenaryShop.hpp"
-#include "Asia.hpp"
-#include "Americas.hpp"
-#include "Europe.hpp"
+#include "WarZone.hpp"
 #include "Champions.hpp"
 #include "Fighter.hpp"
-#include "Ninja.hpp"
+#include "Gru.hpp"
 #include "Validation.hpp"
 #include <vector>
 #include <termios.h>
@@ -26,6 +24,7 @@ protected:
    std::queue<Fighter *> userTeam;
    std::queue<Fighter *> *tempTeam;
    int bank;
+   int keys;
    Fighter *fighter;
    Space *locator;
    Space *mercenaryShop;
@@ -38,7 +37,6 @@ protected:
 
 public:
    Game();
-   void setMap();
    void printMap();
    void setSpaces();
    void moveMenu();
@@ -46,7 +44,7 @@ public:
    void play();
    void printTeam(std::queue<Fighter *>);
    void mShop();
-   void asianSpace();
+   void warSpace();
    void hitFirst(Fighter *one, Fighter *two, int pick);
    void fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy);
    ~Game();

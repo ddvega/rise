@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/73/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/73/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/davidsan/162/rise-through-the-ranks
+CMAKE_SOURCE_DIR = /home/samurai/osu/162/rise-through-the-ranks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/davidsan/162/rise-through-the-ranks/cmake-build-debug
+CMAKE_BINARY_DIR = /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/davidsan/162/rise-through-the-ranks/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/73/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/73/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,60 +123,6 @@ rise_through_the_ranks/fast:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/build
 .PHONY : rise_through_the_ranks/fast
 
-Americas.o: Americas.cpp.o
-
-.PHONY : Americas.o
-
-# target to build an object file
-Americas.cpp.o:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.o
-.PHONY : Americas.cpp.o
-
-Americas.i: Americas.cpp.i
-
-.PHONY : Americas.i
-
-# target to preprocess a source file
-Americas.cpp.i:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.i
-.PHONY : Americas.cpp.i
-
-Americas.s: Americas.cpp.s
-
-.PHONY : Americas.s
-
-# target to generate assembly for a file
-Americas.cpp.s:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Americas.cpp.s
-.PHONY : Americas.cpp.s
-
-Asia.o: Asia.cpp.o
-
-.PHONY : Asia.o
-
-# target to build an object file
-Asia.cpp.o:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.o
-.PHONY : Asia.cpp.o
-
-Asia.i: Asia.cpp.i
-
-.PHONY : Asia.i
-
-# target to preprocess a source file
-Asia.cpp.i:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.i
-.PHONY : Asia.cpp.i
-
-Asia.s: Asia.cpp.s
-
-.PHONY : Asia.s
-
-# target to generate assembly for a file
-Asia.cpp.s:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Asia.cpp.s
-.PHONY : Asia.cpp.s
-
 Champions.o: Champions.cpp.o
 
 .PHONY : Champions.o
@@ -204,32 +150,32 @@ Champions.cpp.s:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.s
 .PHONY : Champions.cpp.s
 
-Europe.o: Europe.cpp.o
+ChineseSop.o: ChineseSop.cpp.o
 
-.PHONY : Europe.o
+.PHONY : ChineseSop.o
 
 # target to build an object file
-Europe.cpp.o:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.o
-.PHONY : Europe.cpp.o
+ChineseSop.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o
+.PHONY : ChineseSop.cpp.o
 
-Europe.i: Europe.cpp.i
+ChineseSop.i: ChineseSop.cpp.i
 
-.PHONY : Europe.i
+.PHONY : ChineseSop.i
 
 # target to preprocess a source file
-Europe.cpp.i:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.i
-.PHONY : Europe.cpp.i
+ChineseSop.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.i
+.PHONY : ChineseSop.cpp.i
 
-Europe.s: Europe.cpp.s
+ChineseSop.s: ChineseSop.cpp.s
 
-.PHONY : Europe.s
+.PHONY : ChineseSop.s
 
 # target to generate assembly for a file
-Europe.cpp.s:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Europe.cpp.s
-.PHONY : Europe.cpp.s
+ChineseSop.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.s
+.PHONY : ChineseSop.cpp.s
 
 Fighter.o: Fighter.cpp.o
 
@@ -285,6 +231,33 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+Gru.o: Gru.cpp.o
+
+.PHONY : Gru.o
+
+# target to build an object file
+Gru.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o
+.PHONY : Gru.cpp.o
+
+Gru.i: Gru.cpp.i
+
+.PHONY : Gru.i
+
+# target to preprocess a source file
+Gru.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.i
+.PHONY : Gru.cpp.i
+
+Gru.s: Gru.cpp.s
+
+.PHONY : Gru.s
+
+# target to generate assembly for a file
+Gru.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.s
+.PHONY : Gru.cpp.s
+
 MercenaryShop.o: MercenaryShop.cpp.o
 
 .PHONY : MercenaryShop.o
@@ -312,32 +285,59 @@ MercenaryShop.cpp.s:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.s
 .PHONY : MercenaryShop.cpp.s
 
-Ninja.o: Ninja.cpp.o
+Sas.o: Sas.cpp.o
 
-.PHONY : Ninja.o
+.PHONY : Sas.o
 
 # target to build an object file
-Ninja.cpp.o:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.o
-.PHONY : Ninja.cpp.o
+Sas.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o
+.PHONY : Sas.cpp.o
 
-Ninja.i: Ninja.cpp.i
+Sas.i: Sas.cpp.i
 
-.PHONY : Ninja.i
+.PHONY : Sas.i
 
 # target to preprocess a source file
-Ninja.cpp.i:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.i
-.PHONY : Ninja.cpp.i
+Sas.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.i
+.PHONY : Sas.cpp.i
 
-Ninja.s: Ninja.cpp.s
+Sas.s: Sas.cpp.s
 
-.PHONY : Ninja.s
+.PHONY : Sas.s
 
 # target to generate assembly for a file
-Ninja.cpp.s:
-	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Ninja.cpp.s
-.PHONY : Ninja.cpp.s
+Sas.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.s
+.PHONY : Sas.cpp.s
+
+Seal.o: Seal.cpp.o
+
+.PHONY : Seal.o
+
+# target to build an object file
+Seal.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o
+.PHONY : Seal.cpp.o
+
+Seal.i: Seal.cpp.i
+
+.PHONY : Seal.i
+
+# target to preprocess a source file
+Seal.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.i
+.PHONY : Seal.cpp.i
+
+Seal.s: Seal.cpp.s
+
+.PHONY : Seal.s
+
+# target to generate assembly for a file
+Seal.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.s
+.PHONY : Seal.cpp.s
 
 Space.o: Space.cpp.o
 
@@ -393,6 +393,33 @@ Validation.cpp.s:
 	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.s
 .PHONY : Validation.cpp.s
 
+WarZone.o: WarZone.cpp.o
+
+.PHONY : WarZone.o
+
+# target to build an object file
+WarZone.cpp.o:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o
+.PHONY : WarZone.cpp.o
+
+WarZone.i: WarZone.cpp.i
+
+.PHONY : WarZone.i
+
+# target to preprocess a source file
+WarZone.cpp.i:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.i
+.PHONY : WarZone.cpp.i
+
+WarZone.s: WarZone.cpp.s
+
+.PHONY : WarZone.s
+
+# target to generate assembly for a file
+WarZone.cpp.s:
+	$(MAKE) -f CMakeFiles/rise_through_the_ranks.dir/build.make CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.s
+.PHONY : WarZone.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -429,36 +456,39 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rise_through_the_ranks"
 	@echo "... edit_cache"
-	@echo "... Americas.o"
-	@echo "... Americas.i"
-	@echo "... Americas.s"
-	@echo "... Asia.o"
-	@echo "... Asia.i"
-	@echo "... Asia.s"
 	@echo "... Champions.o"
 	@echo "... Champions.i"
 	@echo "... Champions.s"
-	@echo "... Europe.o"
-	@echo "... Europe.i"
-	@echo "... Europe.s"
+	@echo "... ChineseSop.o"
+	@echo "... ChineseSop.i"
+	@echo "... ChineseSop.s"
 	@echo "... Fighter.o"
 	@echo "... Fighter.i"
 	@echo "... Fighter.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... Gru.o"
+	@echo "... Gru.i"
+	@echo "... Gru.s"
 	@echo "... MercenaryShop.o"
 	@echo "... MercenaryShop.i"
 	@echo "... MercenaryShop.s"
-	@echo "... Ninja.o"
-	@echo "... Ninja.i"
-	@echo "... Ninja.s"
+	@echo "... Sas.o"
+	@echo "... Sas.i"
+	@echo "... Sas.s"
+	@echo "... Seal.o"
+	@echo "... Seal.i"
+	@echo "... Seal.s"
 	@echo "... Space.o"
 	@echo "... Space.i"
 	@echo "... Space.s"
 	@echo "... Validation.o"
 	@echo "... Validation.i"
 	@echo "... Validation.s"
+	@echo "... WarZone.o"
+	@echo "... WarZone.i"
+	@echo "... WarZone.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

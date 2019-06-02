@@ -7,6 +7,7 @@
 MercenaryShop::MercenaryShop()
 {
    locName = "Mercenary Shop";
+   key = 0;
 }
 
 Fighter *MercenaryShop::buyFighter(int choice)
@@ -14,8 +15,23 @@ Fighter *MercenaryShop::buyFighter(int choice)
 
    if (choice == 1)
    {
-      Fighter *vamp = new Ninja;
-      return vamp;
+      Fighter *g = new Gru;
+      return g;
+   }
+   else if (choice == 2)
+   {
+      Fighter *c = new ChineseSOP;
+      return c;
+   }
+   else if (choice == 3)
+   {
+      Fighter *s = new SAS;
+      return s;
+   }
+   else if (choice == 4)
+   {
+      Fighter *seal = new Seal;
+      return seal;
    }
 
 }
