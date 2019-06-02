@@ -9,8 +9,8 @@
 *******************************************************************************/
 Seal::Seal()
 {
-   name = "Gru";
-   armor = 3;
+   name = "Navy SEAL";
+   armor = 6;
    strength = 25;
    killed = false;
 }
@@ -37,7 +37,7 @@ int Seal::attack()
 *******************************************************************************/
 int Seal::defendDice()
 {
-   return rand() % 12 + 1;
+   return rand() % 15 + 1;
 }
 
 /*******************************************************************************
@@ -46,11 +46,20 @@ int Seal::defendDice()
 *******************************************************************************/
 void Seal::defend(int pain)
 {
-   //Gru defends with 2 6sided die
+   //vampire defends with 1 6sided die
    int counter = defendDice();
 
-   //subtract defense roll and armor from pain
-   pain -= (counter + armor);
+   //completely blocks attack 50% of the time
+   int charmed = rand() % 2 + 1;
+   if (charmed == 1)
+   {
+      //subtract defense roll and armor from pain
+      pain -= (counter + armor);
+   }
+   else //activate charm
+   {
+      pain = 0;
+   }
 
    //calculate damage taken
    if (pain > 0)

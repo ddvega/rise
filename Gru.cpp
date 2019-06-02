@@ -9,7 +9,7 @@
 *******************************************************************************/
 Gru::Gru()
 {
-   name = "Gru";
+   name = "GRU Operative";
    armor = 3;
    strength = 25;
    killed = false;

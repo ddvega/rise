@@ -9,8 +9,8 @@
 *******************************************************************************/
 ChineseSOP::ChineseSOP()
 {
-   name = "Chinese Special Operative";
-   armor = 3;
+   name = "Chinese Operative";
+   armor = 4;
    strength = 25;
    killed = false;
 }
@@ -37,7 +37,7 @@ int ChineseSOP::attack()
 *******************************************************************************/
 int ChineseSOP::defendDice()
 {
-   return rand() % 12 + 1;
+   return rand() % 15 + 1;
 }
 
 /*******************************************************************************
@@ -46,11 +46,20 @@ int ChineseSOP::defendDice()
 *******************************************************************************/
 void ChineseSOP::defend(int pain)
 {
-   //Gru defends with 2 6sided die
+   //vampire defends with 1 6sided die
    int counter = defendDice();
 
-   //subtract defense roll and armor from pain
-   pain -= (counter + armor);
+   //completely blocks attack 25% of the time
+   int charmed = rand() % 4 + 1;
+   if (charmed != 1)
+   {
+      //subtract defense roll and armor from pain
+      pain -= (counter + armor);
+   }
+   else //activate charm
+   {
+      pain = 0;
+   }
 
    //calculate damage taken
    if (pain > 0)

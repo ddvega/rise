@@ -73,6 +73,7 @@ int Space::getKey()
    return key;
 }
 
+
 //void Space::buildTeam() {}
 
 Space::~Space() {}

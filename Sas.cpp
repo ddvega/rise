@@ -10,7 +10,7 @@
 SAS::SAS()
 {
    name = "SAS Operative";
-   armor = 3;
+   armor = 5;
    strength = 25;
    killed = false;
 }
@@ -46,11 +46,20 @@ int SAS::defendDice()
 *******************************************************************************/
 void SAS::defend(int pain)
 {
-   //Gru defends with 2 6sided die
+   //vampire defends with 1 6sided die
    int counter = defendDice();
 
-   //subtract defense roll and armor from pain
-   pain -= (counter + armor);
+   //completely blocks attack 33% of the time
+   int charmed = rand() % 3 + 1;
+   if (charmed != 1)
+   {
+      //subtract defense roll and armor from pain
+      pain -= (counter + armor);
+   }
+   else //activate charm
+   {
+      pain = 0;
+   }
 
    //calculate damage taken
    if (pain > 0)

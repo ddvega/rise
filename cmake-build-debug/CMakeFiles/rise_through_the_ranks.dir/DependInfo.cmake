@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/samurai/osu/162/rise-through-the-ranks/Champions.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/ChineseSop.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Fighter.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Game.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Gru.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/MercenaryShop.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Sas.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Seal.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Space.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/Validation.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/WarZone.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o"
-  "/home/samurai/osu/162/rise-through-the-ranks/main.cpp" "/home/samurai/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/main.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Champions.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Champions.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/ChineseSop.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/ChineseSop.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Fighter.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Fighter.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Game.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Game.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Gru.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Gru.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/MercenaryShop.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/MercenaryShop.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Sas.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Sas.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Seal.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Seal.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Space.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Space.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/Validation.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/Validation.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/WarZone.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/WarZone.cpp.o"
+  "/home/davidsan/162/rise-through-the-ranks/main.cpp" "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/rise_through_the_ranks.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -10,7 +10,7 @@
 class WarZone : public Space
 {
 protected:
-   std::queue<Fighter *> asiaTeam;
+   std::queue<Fighter *> enemy;
 
 public:
    WarZone();

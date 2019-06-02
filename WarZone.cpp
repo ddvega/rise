@@ -6,11 +6,14 @@
 
 WarZone::WarZone()
 {
-   locName = "Asia";
+   locName = "War Zone";
    key = 1;
 }
 
-Fighter *WarZone::buyFighter(int choice) {}
+Fighter *WarZone::buyFighter(int choice)
+{
+   return nullptr;
+}
 
 WarZone::~WarZone()
 {
@@ -19,26 +22,44 @@ WarZone::~WarZone()
 
 void WarZone::buildTeam(int opponent)
 {
-   int teamSize = (rand() % opponent + 1) * 1.25;
-   for (int i = 0; i < teamSize; i++)
+   opponent /= 2;
+   for (int i = 0; i < rand() % opponent + 1; i++)
    {
       fighter = new Gru;
-      asiaTeam.push(fighter);
+      enemy.push(fighter);
+      fighter = nullptr;
+   }
+   for (int i = 0; i < rand()% opponent + 1; i++)
+   {
+      fighter = new ChineseSOP;
+      enemy.push(fighter);
+      fighter = nullptr;
+   }
+   for (int i = 0; i < rand()% opponent + 1; i++)
+   {
+      fighter = new SAS;
+      enemy.push(fighter);
+      fighter = nullptr;
+   }
+   for (int i = 0; i < rand()% opponent + 1; i++)
+   {
+      fighter = new Seal;
+      enemy.push(fighter);
       fighter = nullptr;
    }
 }
 
 std::queue<Fighter *> *WarZone::getTeam()
 {
-   return &asiaTeam;
+   return &enemy;
 }
 
 void WarZone::destroyTeam()
 {
    //remove front node until the list is empty
-   while (!asiaTeam.empty())
+   while (!enemy.empty())
    {
-      delete asiaTeam.front();
-      asiaTeam.pop();
+      delete enemy.front();
+      enemy.pop();
    }
 }

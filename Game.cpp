@@ -41,6 +41,7 @@ void Game::setSpaces()
    asiaTrain->setBottom(mercenaryShop);
    asiaTrain->setLeft(europeTrain);
    asiaTrain->setRight(east);
+   asiaTrain->setLocName("Asia");
 
    americasTrain->setBottom(west);
    americasTrain->setTop(mercenaryShop);
@@ -316,7 +317,7 @@ void Game::play()
                    std::endl;
          move(choice, enterRoom);
       }
-      if (bank <= 0)
+      if (bank <= 0 || (bank < 1000 && userTeam.empty()))
       {
          std::cout << "You ran out of money. GAME OVER." << std::endl;
          choice = 2;
