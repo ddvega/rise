@@ -9,7 +9,6 @@ Game::Game()
    bank = 0;
    setSpaces();
    locator = mercenaryShop;
-   //setMap();
 }
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
@@ -17,8 +16,8 @@ Game::Game()
 void Game::setSpaces()
 {
    mercenaryShop = new MercenaryShop;
-   mercenaryShopLeft = new MercenaryShop;
-   mercenaryShopRight = new MercenaryShop;
+   west = new Europe;
+   east = new Asia;
    asiaTrain = new Asia;
    americasTrain = new Americas;
    europeTrain = new Europe;
@@ -28,34 +27,33 @@ void Game::setSpaces()
    mercenaryShop->setTop(asiaTrain);
    mercenaryShop->setLeft(europeTrain);
    mercenaryShop->setRight(champLeague);
-   mercenaryShop->setLocName("Central Shop");
+   mercenaryShop->setLocName("War Shop");
 
-   mercenaryShopLeft->setTop(europeTrain);
-   mercenaryShopLeft->setRight(americasTrain);
-   mercenaryShopLeft->setLocName("West Shop");
+   west->setTop(europeTrain);
+   west->setRight(americasTrain);
+   west->setLocName("West World");
 
-   mercenaryShopRight->setLeft(asiaTrain);
-   mercenaryShopRight->setRight(champLeague);
-   mercenaryShopRight->setLocName("East Shop");
+   east->setLeft(asiaTrain);
+   east->setBottom(champLeague);
+   east->setLocName("East World");
 
    asiaTrain->setBottom(mercenaryShop);
-   asiaTrain->setTop(mercenaryShopRight);
    asiaTrain->setLeft(europeTrain);
-   asiaTrain->setRight(champLeague);
+   asiaTrain->setRight(east);
 
-   americasTrain->setBottom(mercenaryShopLeft);
+   americasTrain->setBottom(west);
    americasTrain->setTop(mercenaryShop);
    americasTrain->setRight(champLeague);
-   americasTrain->setLeft(europeTrain);
+   americasTrain->setLeft(west);
 
-   europeTrain->setBottom(americasTrain);
+   europeTrain->setBottom(west);
    europeTrain->setTop(asiaTrain);
    europeTrain->setRight(mercenaryShop);
-   europeTrain->setLeft(mercenaryShopLeft);
+   europeTrain->setLeft(west);
 
    champLeague->setBottom(americasTrain);
-   champLeague->setTop(asiaTrain);
-   champLeague->setRight(mercenaryShopRight);
+   champLeague->setTop(east);
+   champLeague->setRight(east);
    champLeague->setLeft(mercenaryShop);
 
 }
@@ -66,12 +64,10 @@ void Game::moveMenu()
 {
    {
       std::cout << "You're currently in " << locator->getLocationName()
-                << "\n1. Move Up"
-                << "\n2. Move Down"
-                << "\n3. Move Left"
-                << "\n4. Move Right"
-                << "\n5. Enter space"
-                << "\n6. Quit"
+                << "\n\nNavigation Keys"
+                << "\n[w] Move Up [s] Move Down [a] Move Left [d] Move Right"
+                << "\n[e] Enter space"
+                << "\n[q] Quit"
                 << std::endl;
 
    }
@@ -83,42 +79,42 @@ void Game::move(int &exit, int &enter)
 {
    int choice;
 
-   std::cout << "location: " << locator->getLocationName() << std::endl;
+   //std::cout << "location: " << locator->getLocationName() << std::endl;
    moveMenu();
-   choice = maxMinIntOnly(1, 6);
-   if (choice == 1)
+   choice = getch("wasdeq");
+   if (choice == 'w')
    {
       if (locator->getTop() != nullptr)
       {
          locator = locator->getTop();
       }
    }
-   else if (choice == 2)
+   else if (choice == 's')
    {
       if (locator->getBottom() != nullptr)
       {
          locator = locator->getBottom();
       }
    }
-   else if (choice == 3)
+   else if (choice == 'a')
    {
       if (locator->getLeft() != nullptr)
       {
          locator = locator->getLeft();
       }
    }
-   else if (choice == 4)
+   else if (choice == 'd')
    {
       if (locator->getRight() != nullptr)
       {
          locator = locator->getRight();
       }
    }
-   else if (choice == 5)
+   else if (choice == 'e')
    {
       enter = 1;
    }
-   else
+   else if (choice == 'q')
    {
       exit = 2;
    }
@@ -130,9 +126,9 @@ void Game::move(int &exit, int &enter)
 void Game::printTeam(std::queue<Fighter *> q)
 {
    int count = 0;
-   std::queue < Fighter * > q2;
+   std::queue<Fighter *> q2;
    q2 = q;
-   std::cout << "Your team: ";
+   std::cout << "Team: ";
    while (!q.empty())
    {
       count++;
@@ -155,7 +151,8 @@ void Game::mShop()
    int answer, quantity;
    do
    {
-      std::cout << "Welcome to the Mercenary Shop"
+      std::cout << "Bank Balance: " << bank
+                << "\nWelcome to the Mercenary Shop"
                 << "\nPlease select the fighter you want to purchase"
                 << "\n1. Ninja $10,000"
                 << "\n2. Leave Fighter room"
@@ -168,6 +165,7 @@ void Game::mShop()
          quantity = maxMinIntOnly(1, 100);
          if (bank >= 10000 * quantity)
          {
+            bank -= 10000 * quantity;
             for (int i = 0; i < quantity; i++)
             {
                userTeam.push(locator->buyFighter(answer));
@@ -191,10 +189,12 @@ void Game::asianSpace()
    int bribe = rand() % 200000 + 1;
    int choice;
    std::cout << "You have entered the Asian Territory"
-             << "\nA team consisting of: ";
+             << "\nA team of " << tempTeam->size() << " warriors awaits"
+             << "\nYour team of " << userTeam.size() << " warriors"
+             << std::endl;
 
-   printTeam(*tempTeam);
-   std::cout << "\n is ready to FIGHT your team"
+   //printTeam(*tempTeam);
+   std::cout << "\nWhat will it be? Fight or Flight?"
              << "\nThey demand a payment of "
              << bribe
              << " to pass without fighting"
@@ -210,6 +210,8 @@ void Game::asianSpace()
    {
       //training only for cash. Dont fight to kill. Make copy of userTeam;
       //std::queue<Fighter*> copyUserTeam = userTeam;
+      clearScreen(60);
+      printMap();
       fight(userTeam, *tempTeam);
    }
 }
@@ -222,33 +224,57 @@ void Game::play()
    int choice = 1, enterRoom = 0;
    do
    {
-      clearScreen(60);
-      //setMap();
-      printMap();
-      printTeam(userTeam);
-      if (locator->getLocationName() == "Central Shop" && enterRoom == 1)
+
+      if (locator->getLocationName() == "War Shop" && enterRoom == 1)
       {
+         clearScreen(60);
+         printMap();
+         //printTeam(userTeam);
          enterRoom = 0;
          mShop();
       }
-      if (locator->getLocationName() == "Asia" && enterRoom == 1 && !userTeam
-         .empty())
+      if (locator->getLocationName() == "Asia" && enterRoom == 1)
       {
-         asiaTrain->destroyTeam();
-         enterRoom = 0;
-         asiaTrain->buildTeam(userTeam.size());
-         tempTeam = asiaTrain->getTeam();
-         asianSpace();
-      }
-      else
-      {
-         std::cout << "You may not enter without warriors" << std::endl;
-         enterRoom = 0;
-      }
+         clearScreen(60);
+         printMap();
+         //printTeam(userTeam);
+         if (!userTeam.empty())
+         {
 
+            asiaTrain->destroyTeam();
+            enterRoom = 0;
+            asiaTrain->buildTeam(userTeam.size());
+            tempTeam = asiaTrain->getTeam();
+            asianSpace();
+            //std::cout << "You may not enter without warriors" << std::endl;
+            std::cout
+               << "hit ENTER to continue";            //maxMinIntOnly(1,2);
+            std::cin.get();
+         }
+         else
+         {
+            //clearScreen(60);
+            std::cout << "You may not enter without warriors" << std::endl;
+            std::cout << "hit ENTER to continue";
+            std::cin.get();
+            enterRoom = 0;
+         }
+      }
       if (choice == 1)
       {
+
+         clearScreen(60);
+         printMap();
+         std::cout << "Bank Balance: " << bank << std::endl;
+         //printTeam(userTeam);
+         std::cout << "Team size: " << userTeam.size() << " warriors" <<
+                   std::endl;
          move(choice, enterRoom);
+      }
+      if (bank <= 0)
+      {
+         std::cout << "You ran out of money. GAME OVER." << std::endl;
+         choice = 2;
       }
 
    }
@@ -332,7 +358,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          t2Points++; //point added to team2
          battle++;//increment total battles
          rounds = 0;//reset rounds
-         money -= 1000;
+         money -= 2500;
       }
 
       //team 2 fighter killed, team 1 wins battle
@@ -352,7 +378,6 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          Fighter *fighterBack = uTeam.front();
          uTeam.push(fighterBack);
          uTeam.pop();
-         //delete enemy.front();
          enemy.pop(); //loser is removed from team2 stack
          t1Points++; //point added to team1
          battle++;//increment total battles
@@ -426,7 +451,7 @@ void Game::printMap()
       count++;
    }
 
-   std::vector <std::pair<int, int>> points;
+   std::vector<std::pair<int, int>> points;
    if (locator->getLocationName() == "Europe")
    {
       //euro zone
@@ -460,7 +485,7 @@ void Game::printMap()
       }
    }
 
-   if (locator->getLocationName() == "West Shop")
+   if (locator->getLocationName() == "West World")
    {
       //shop left
       points.emplace_back(16, 3);
@@ -527,7 +552,7 @@ void Game::printMap()
 
    }
 
-   if (locator->getLocationName() == "Central Shop")
+   if (locator->getLocationName() == "War Shop")
    {
       //shop middle
       points.emplace_back(9, 30);
@@ -640,7 +665,7 @@ void Game::printMap()
       }
    }
 
-   if (locator->getLocationName() == "East Shop")
+   if (locator->getLocationName() == "East World")
    {
       //shop right
       points.emplace_back(6, 60);
@@ -673,24 +698,22 @@ void Game::printMap()
       }
    }
 
-
-
    //print labels
 
-   map[18][9] = 'S';
-   map[18][12] = 'H';
-   map[18][15] = 'O';
-   map[18][18] = 'P';
+   map[18][9] = 'W';
+   map[18][12] = 'E';
+   map[18][15] = 'S';
+   map[18][18] = 'T';
 
    map[11][36] = 'S';
    map[11][39] = 'H';
    map[11][42] = 'O';
    map[11][45] = 'P';
 
-   map[4][66] = 'S';
-   map[4][69] = 'H';
-   map[4][72] = 'O';
-   map[4][75] = 'P';
+   map[4][66] = 'E';
+   map[4][69] = 'A';
+   map[4][72] = 'S';
+   map[4][75] = 'T';
 
    map[18][48] = 'A';
    map[18][51] = 'M';
@@ -718,13 +741,6 @@ void Game::printMap()
    map[3][39] = 'I';
    map[3][42] = 'A';
 
-
-
-
-
-
-
-
    //print map
    for (int i = 0; i < xSize; i++)
    {
@@ -734,17 +750,7 @@ void Game::printMap()
    }
    std::cout << std::endl;
 }
-/*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
-*******************************************************************************/
-/*void Game::destroyTeam(std::queue<Fighter *>*& team)
-{
-   while (!team.empty())
-   {
-      delete team.front();
-      team.pop();
-   }
-}*/
+
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
 *******************************************************************************/
@@ -759,11 +765,14 @@ Game::~Game()
    }
 
    delete mercenaryShop;
-   delete mercenaryShopLeft;
-   delete mercenaryShopRight;
+   delete west;
+   delete east;
    delete asiaTrain;
    delete americasTrain;
    delete europeTrain;
    delete champLeague;
 
 }
+
+
+

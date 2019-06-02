@@ -4,7 +4,10 @@
 int main()
 {
    srand(time(nullptr));
+
    Game s;
+
    s.play();
+
    return 0;
 }

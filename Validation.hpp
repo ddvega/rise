@@ -13,6 +13,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <termios.h>
+#include <unistd.h>
 
 int maxMinIntOnly(int, int);
 bool digitOnly(std::string);
@@ -22,4 +24,5 @@ void charOnly();
 std::string wordOnly();
 std::string wordOrDigit();
 void destroy2dArray(char **ptr, int size);
+int getch(std::string);
 #endif

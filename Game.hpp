@@ -16,6 +16,9 @@
 #include "Ninja.hpp"
 #include "Validation.hpp"
 #include <vector>
+#include <termios.h>
+#include <unistd.h>
+
 class Game
 {
 
@@ -26,15 +29,12 @@ protected:
    Fighter *fighter;
    Space *locator;
    Space *mercenaryShop;
-   Space *mercenaryShopRight;
-   Space *mercenaryShopLeft;
+   Space *east;
+   Space *west;
    Space *asiaTrain;
    Space *americasTrain;
    Space *europeTrain;
    Space *champLeague;
-   //int xSize = 24;
-   //int ySize = 84;
-   //char ** map;
 
 public:
    Game();
@@ -49,7 +49,6 @@ public:
    void asianSpace();
    void hitFirst(Fighter *one, Fighter *two, int pick);
    void fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy);
-   void destroyTeam(std::queue<Fighter *>*&);
    ~Game();
 
 };

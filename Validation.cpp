@@ -167,3 +167,34 @@ void destroy2dArray(char **ptr, int size)
       delete[] ptr[i];
    delete[] ptr;
 }
+/*******************************************************************************
+**  This function deallocates memory by destroying the 2d array. The
+**
+*******************************************************************************/
+int getch(std::string rules)
+{
+   struct termios oldt, newt;
+   int ch;
+   bool present = false;
+
+   do
+   {
+      tcgetattr(STDIN_FILENO, &oldt);
+      newt = oldt;
+      newt.c_lflag &= ~(ICANON | ECHO);
+      tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+      ch = getchar();
+      tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+
+      for (int i = 0; i < rules.length(); i++)
+      {
+         if (rules[i] == ch)
+         {
+            present = true;
+         }
+      }
+   }
+   while (!present);
+
+   return ch;
+}
