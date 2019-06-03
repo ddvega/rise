@@ -1,6 +1,9 @@
-//
-// Created by samurai on 6/2/19.
-//
+/*******************************************************************************
+** Program:       Rise Project 4
+** Author:        David Vega
+** Date:          6/3/19
+** Description:
+*******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__SEAL_HPP
 #define RISE_THROUGH_THE_RANKS__SEAL_HPP
