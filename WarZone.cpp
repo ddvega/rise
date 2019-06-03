@@ -22,30 +22,34 @@ WarZone::~WarZone()
 
 void WarZone::buildTeam(int opponent)
 {
-   opponent /= 2;
-   for (int i = 0; i < rand() % opponent + 1; i++)
+
+   for (int i = 0; i < rand() % (opponent * 2) + 1; i++)
    {
-      fighter = new Gru;
-      enemy.push(fighter);
-      fighter = nullptr;
-   }
-   for (int i = 0; i < rand()% opponent + 1; i++)
-   {
-      fighter = new ChineseSOP;
-      enemy.push(fighter);
-      fighter = nullptr;
-   }
-   for (int i = 0; i < rand()% opponent + 1; i++)
-   {
-      fighter = new SAS;
-      enemy.push(fighter);
-      fighter = nullptr;
-   }
-   for (int i = 0; i < rand()% opponent + 1; i++)
-   {
-      fighter = new Seal;
-      enemy.push(fighter);
-      fighter = nullptr;
+      int point = rand() % 4 + 1;
+      if (point == 1)
+      {
+         fighter = new Gru;
+         enemy.push(fighter);
+         fighter = nullptr;
+      }
+      else if (point == 2)
+      {
+         fighter = new ChineseSOP;
+         enemy.push(fighter);
+         fighter = nullptr;
+      }
+      else if (point == 3)
+      {
+         fighter = new SAS;
+         enemy.push(fighter);
+         fighter = nullptr;
+      }
+      else
+      {
+         fighter = new Seal;
+         enemy.push(fighter);
+         fighter = nullptr;
+      }
    }
 }
 

@@ -23,6 +23,7 @@ void Game::setSpaces()
    americasTrain = new WarZone;
    europeTrain = new WarZone;
    champLeague = new Champions;
+   enemyTeam = new WarZone;
 
    mercenaryShop->setBottom(americasTrain);
    mercenaryShop->setTop(asiaTrain);
@@ -126,29 +127,7 @@ void Game::move(int &exit, int &enter)
    }
 
 }
-/*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
-*******************************************************************************/
-void Game::printTeam(std::queue<Fighter *> q)
-{
-   int count = 0;
-   std::queue<Fighter *> q2;
-   q2 = q;
-   std::cout << "Team: ";
-   while (!q.empty())
-   {
-      count++;
-      std::cout << q.front()->getName() << " ";
-      q.pop();
 
-      //print no more than 20 numbers per line
-      if (count % 20 == 0)
-      {
-         std::cout << std::endl;
-      }
-   }
-   std::cout << std::endl;
-}
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
 *******************************************************************************/
@@ -214,13 +193,17 @@ void Game::warSpace()
 {
    int bribe = rand() % 200000 + 1;
    int choice;
-   std::cout << "You have entered a war zone"
-             << "\nA team of " << tempTeam->size() << " warriors awaits"
-             << "\nYour team of " << userTeam.size() << " warriors"
+   std::cout << "You have entered " << locator->getLocationName()
+             << "'s War Zone"
+             << "\n\nA team of " << enemyFighters->size() << " warriors "
              << std::endl;
+   printTeam(*enemyFighters);
+   std::cout << "\n       awaits"
+             << "\n\nYour team of " << userTeam.size() << " warriors"
+             << std::endl;
+   printTeam(userTeam);
 
-   //printTeam(*tempTeam);
-   std::cout << "\nWhat will it be? Fight or Flight?"
+   std::cout << "\n\nWhat will it be? Fight or Flight?"
              << "\nThey demand a payment of "
              << bribe
              << " to pass without fighting"
@@ -238,7 +221,7 @@ void Game::warSpace()
       //std::queue<Fighter*> copyUserTeam = userTeam;
       clearScreen(60);
       printMap();
-      fight(userTeam, *tempTeam);
+      fight(userTeam, *enemyFighters);
    }
 }
 /*******************************************************************************
@@ -261,17 +244,24 @@ void Game::play()
       else if (locator->getLocationName() == "Champion's League" && enterRoom
          == 1)
       {
-         if (keys == 5)
+         clearScreen(50);
+         if (keys == 5 && !userTeam.empty())
          {
             clearScreen(60);
-            //printMap();
+            champLeague->destroyTeam();
             enterRoom = 0;
-            //build functionality
+            champLeague->buildTeam(userTeam.size());
+            enemyFighters = champLeague->getTeam();
+            warSpace();
+            std::cout << "Enter [c] to continue";
+            getch("cC");
+
          }
          else
          {
             std::cout << "You're not powerful enough to fight the champion"
-                      << "\nYou must have 5 keys to enter"
+                      << "\nYou must have 5 keys to enter and at least 1 "
+                         "warrior"
                       << "\nEnter [c] to continue"
                       << std::endl;
             getch("cC");
@@ -280,32 +270,30 @@ void Game::play()
       }
 
       else if (locator->getLocationName() != "War Shop" &&
-         locator->getLocationName() != "Champion's League" && enterRoom
-         == 1)
+         locator->getLocationName() != "Champion's League" &&
+         enterRoom == 1)
       {
          clearScreen(60);
-         //printMap();
-         //printTeam(userTeam);
          if (!userTeam.empty())
          {
 
-            asiaTrain->destroyTeam();
+            enemyTeam->destroyTeam();
             enterRoom = 0;
-            asiaTrain->buildTeam(userTeam.size());
-            tempTeam = asiaTrain->getTeam();
+            enemyTeam->buildTeam(userTeam.size());
+            enemyFighters = enemyTeam->getTeam();
             warSpace();
             std::cout << "Enter [c] to continue";
             getch("cC");
          }
          else
          {
-            //clearScreen(60);
             std::cout << "You may not enter without warriors" << std::endl;
             std::cout << "Enter [c] to continue";
             getch("cC");
             enterRoom = 0;
          }
       }
+
       if (choice == 1)
       {
 
@@ -317,9 +305,14 @@ void Game::play()
                    std::endl;
          move(choice, enterRoom);
       }
-      if (bank <= 0 || (bank < 1000 && userTeam.empty()))
+      if (bank <= 0 || (bank < 10000 && userTeam.empty()))
       {
          std::cout << "You ran out of money. GAME OVER." << std::endl;
+         choice = 2;
+      }
+      if (keys == 6)
+      {
+         std::cout << "You are the new world champion" << std::endl;
          choice = 2;
       }
 
@@ -404,7 +397,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          t2Points++; //point added to team2
          battle++;//increment total battles
          rounds = 0;//reset rounds
-         money -= 5000;
+         money -= 3000;
       }
 
       //team 2 fighter killed, team 1 wins battle
@@ -455,6 +448,11 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
                       << std::endl << std::endl;
             if (locator->getKey() == 1)
             {
+               int bonus = rand() % 100000 + 1;
+               bank += bonus;
+               std::cout << "You've taken you're enemy's key and "
+                         << bonus << " dollars of their money"
+                         << std::endl;
                keys++;
                locator->setKey(0);
             }
@@ -478,7 +476,29 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
    printTeam(userTeam);
 
 }
+/*******************************************************************************
+**  Function executes attack and defend, randomly deciding who attacks first
+*******************************************************************************/
+void Game::printTeam(std::queue<Fighter *> q)
+{
+   int count = 0;
+   std::queue<Fighter *> q2;
+   q2 = q;
+   //std::cout << "Team: ";
+   while (!q.empty())
+   {
+      count++;
+      std::cout << q.front()->getName() << " ";
+      q.pop();
 
+      //print no more than 20 numbers per line
+      if (count % 5 == 0)
+      {
+         std::cout << std::endl;
+      }
+   }
+   std::cout << std::endl;
+}
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
 *******************************************************************************/
@@ -813,7 +833,6 @@ void Game::printMap()
 *******************************************************************************/
 Game::~Game()
 {
-   // destroy2dArray(map, xSize);
    //remove front node until the list is empty
    while (!userTeam.empty())
    {
@@ -828,6 +847,7 @@ Game::~Game()
    delete americasTrain;
    delete europeTrain;
    delete champLeague;
+   delete enemyTeam;
 
 }
 

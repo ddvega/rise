@@ -5,8 +5,12 @@
 #ifndef RISE_THROUGH_THE_RANKS__CHAMPIONS_HPP
 #define RISE_THROUGH_THE_RANKS__CHAMPIONS_HPP
 #include "Space.hpp"
+#include <queue>
 class Champions : public Space
 {
+protected:
+   std::queue<Fighter *> enemy;
+
 public:
    Champions();
    ~Champions() override;

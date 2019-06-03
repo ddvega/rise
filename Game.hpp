@@ -22,7 +22,7 @@ class Game
 
 protected:
    std::queue<Fighter *> userTeam;
-   std::queue<Fighter *> *tempTeam;
+   std::queue<Fighter *> *enemyFighters;
    int bank;
    int keys;
    Fighter *fighter;
@@ -34,6 +34,7 @@ protected:
    Space *americasTrain;
    Space *europeTrain;
    Space *champLeague;
+   Space *enemyTeam;
 
 public:
    Game();

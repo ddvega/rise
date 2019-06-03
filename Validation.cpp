@@ -173,6 +173,7 @@ void destroy2dArray(char **ptr, int size)
 *******************************************************************************/
 int getch(std::string rules)
 {
+   //http://www.cplusplus.com/forum/unices/106185/
    struct termios oldt, newt;
    int ch;
    bool present = false;
