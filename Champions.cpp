@@ -25,7 +25,7 @@ Champions::~Champions()
 
 void Champions::buildTeam(int opponent)
 {
-   for (int i = 0; i < rand() % (opponent * 2) + 1; i++)
+   for (int i = 0; i < opponent; i++)
    {
       int point = rand() % 2 + 1;
 

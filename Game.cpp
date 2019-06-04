@@ -232,7 +232,7 @@ void Game::warSpace()
 *******************************************************************************/
 void Game::play()
 {
-   bank = 100000 + rand() % 1000000 + 10000;
+   bank = 100000 + (rand() % 1000000 + 100000);
    int choice = 1, enterRoom = 0;
    do
    {
@@ -358,11 +358,16 @@ void Game::hitFirst(Fighter *one, Fighter *two, int pick)
 *******************************************************************************/
 void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
 {
+   clearScreen(50);
    int battle = 1, t1Points = 0, t2Points = 0, rounds = 0;
    int money = 0;
+   int bonus = 0;
 
    std::cout << "\nEnemy Team Size: " << enemy.size() << std::endl;
    std::cout << "Your Team Size: " << userTeam.size() << std::endl;
+   std::cout << "------------------------------------------------------------"
+                "-------------------"
+             << std::endl;
    do //while loop stops when one team runs out of fighters
    {
       //round consists of an attack and counter attack. Who attacks first is
@@ -376,6 +381,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
       {
          hitFirst(uTeam.front(), enemy.front(), 2);
       }
+
 
       //keep track of how many rounds are fought in each battle
       rounds++;
@@ -394,6 +400,10 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
                    << " "
                    << " Won after " << rounds << " rounds "
                    << std::endl;
+         std::cout
+            << "------------------------------------------------------------"
+               "-------------------"
+            << std::endl;
 
          delete uTeam.front();//activate if you want to fight to death
          uTeam.pop(); //loser is removed from team1 stack
@@ -416,6 +426,10 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
                    << " "
                    << " Won after " << rounds << " rounds "
                    << std::endl;
+         std::cout
+            << "------------------------------------------------------------"
+               "-------------------"
+            << std::endl;
          uTeam.front()->harden();
          Fighter *fighterBack = uTeam.front();
          uTeam.push(fighterBack);
@@ -424,7 +438,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          t1Points++; //point added to team1
          battle++;//increment total battles
          rounds = 0;//reset rounds
-         money += 5000;
+         money += 10000;
       }
 
 
@@ -443,21 +457,31 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          {
             std::cout << "\nEnemy Wins " << t2Points << " to " << t1Points
                       << std::endl << std::endl;
+            //enemy took a key from you
+            if (keys >= 1)
+            {
+               std::cout << "Enemy has taken one of your keys" << std::endl;
+               keys--;
+               //take key from enemy
+               locator->setKey(1);
+            }
+
          }
             //team A wins
          else if (t1Points > t2Points)
          {
             std::cout << "\nYou Win " << t1Points << " to " << t2Points
                       << std::endl << std::endl;
-            if (locator->getKey() == 1)
+            if (locator->getKey() >= 1)
             {
-               int bonus = rand() % 100000 + 1;
+               bonus = rand() % 100000 + 1;
                bank += bonus;
                std::cout << "You've taken you're enemy's key and "
                          << bonus << " dollars of their money"
                          << std::endl;
                keys++;
-               locator->setKey(0);
+               //take key from enemy
+               locator->setKey(-1);
             }
             else
             {
@@ -469,8 +493,8 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
    }
    while (!(uTeam.empty() || enemy.empty())); //kill loop if team empty
    std::cout << "Bank Balance: " << bank;
-   bank += money;
-   std::cout << "\nYou earned: " << money
+   bank += (money + bonus);
+   std::cout << "\nYou earned: " << money + bonus
              << "\nNew Bank Balance: "
              << bank
              << std::endl;
@@ -501,6 +525,74 @@ void Game::printTeam(std::queue<Fighter *> q)
       }
    }
    std::cout << std::endl;
+}
+/*******************************************************************************
+**  Function executes attack and defend, randomly deciding who attacks first
+*******************************************************************************/
+void Game::printCup()
+{
+   int xSize = 24;
+   int ySize = 90;
+   int count = 0;
+   char map[xSize][ySize];
+   for (int x = 0; x < xSize; x++)
+   {
+      for (int y = 0; y < ySize; y++)
+      {
+         map[x][0] = '|';
+         map[x][ySize - 1] = '|';
+         map[0][y] = '-';
+         map[xSize - 1][y] = '-';
+      }
+   }
+   //set the white spaces
+   for (int x = 1; x < xSize - 1; x++)
+   {
+      for (int y = 1; y < ySize - 1; y++)
+      {
+         map[x][y] = ' ';
+      }
+      count++;
+   }
+   std::vector<std::pair<int, int>> points;
+   points.emplace_back(1, 12);//"Y"
+   points.emplace_back(1, 18);
+   points.emplace_back(2, 15);
+   points.emplace_back(3, 15);
+   points.emplace_back(4, 15);
+   points.emplace_back(1, 21);//"U"
+   points.emplace_back(1, 24);
+   points.emplace_back(1, 27);
+   points.emplace_back(2, 21);
+   points.emplace_back(2, 27);
+   points.emplace_back(3, 21);
+   points.emplace_back(3, 27);
+   points.emplace_back(4, 21);
+   points.emplace_back(4, 24);
+   points.emplace_back(4, 27);
+
+
+
+   //set borders
+   for (int i = 0; i < points.size(); i++)
+   {
+      map[points[i].first][points[i].second] = '*';
+   }
+
+
+
+
+
+
+   //print map
+   for (int i = 0; i < xSize; i++)
+   {
+      std::cout << std::endl;
+      for (int c = 0; c < ySize; c++)
+         std::cout << map[i][c];
+   }
+   std::cout << std::endl;
+
 }
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first

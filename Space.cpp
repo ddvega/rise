@@ -66,9 +66,9 @@ Space *Space::getBottom()
 {
    return bottom;
 }
-void Space::setKey(int key)
+void Space::setKey(int k)
 {
-   this->key = key;
+   key += k;
 }
 
 int Space::getKey()

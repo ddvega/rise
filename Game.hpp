@@ -42,6 +42,7 @@ protected:
 public:
    Game();
    void printMap();
+   void printCup();
    void setSpaces();
    void moveMenu();
    void move(int &, int&);
