@@ -6,12 +6,17 @@
 *******************************************************************************/
 #include "MercenaryShop.hpp"
 
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 MercenaryShop::MercenaryShop()
 {
    locName = "Mercenary Shop";
    key = 0;
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 Fighter *MercenaryShop::buyFighter(int choice)
 {
 
@@ -30,19 +35,31 @@ Fighter *MercenaryShop::buyFighter(int choice)
       Fighter *s = new SAS;
       return s;
    }
-   else if (choice == 4)
+   else
    {
       Fighter *seal = new Seal;
       return seal;
    }
 
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 MercenaryShop::~MercenaryShop() {}
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 void MercenaryShop::buildTeam(int opponent) {}
-
-std::queue<Fighter *> *MercenaryShop::getTeam() {}
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
+std::queue<Fighter *> *MercenaryShop::getTeam()
+{
+   return nullptr;
+}
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 void MercenaryShop::destroyTeam() {}
 
 

@@ -40,7 +40,8 @@ int maxMinIntOnly(int min, int max)
 *******************************************************************************/
 bool digitOnly(std::string a)
 {
-   for (unsigned int i = 0; i < a.length(); i++)
+   int size = a.length();
+   for ( int i = 0; i < size; i++)
    {
       if (i == 0)
       {
@@ -177,6 +178,7 @@ int getch(std::string rules)
    struct termios oldt, newt;
    int ch;
    bool present = false;
+   int size = rules.length();
 
    do
    {
@@ -187,7 +189,7 @@ int getch(std::string rules)
       ch = getchar();
       tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
 
-      for (int i = 0; i < rules.length(); i++)
+      for (int i = 0; i < size; i++)
       {
          if (rules[i] == ch)
          {

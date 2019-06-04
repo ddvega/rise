@@ -6,12 +6,13 @@
 *******************************************************************************/
 #include <iostream>
 #include "Game.hpp"
+#include "Validation.hpp"
 
 int main()
 {
-   Game t;
-   t.printCup();
-   int test = getch("c");
+   //Game t;
+   //t.printCup();
+   //int test = getch("c");
    int key;
    srand(time(nullptr));
    clearScreen(50);
@@ -30,7 +31,6 @@ int main()
 
    std::cout << "\nEnter [p] to proceed";
    key = getch("pq");
-   clearScreen(50);
    std::cout << "\n\nEvery year the most powerful "
                 "gangs in"
                 " the world compete in a war \ntournament. Their smartest and "
@@ -53,7 +53,6 @@ int main()
 
    std::cout << "\nEnter [p] to proceed";
    key = getch("p");
-   clearScreen(50);
    std::cout << "\nRules of Engagement"
                 "\n\nYou start with a bank balance. With that balance you'll"
                 "\nbe able to build your team of mercenaries by entering the"

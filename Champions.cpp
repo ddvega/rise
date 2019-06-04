@@ -7,22 +7,31 @@
 
 #include "Champions.hpp"
 
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 Champions::Champions()
 {
    locName = "Champion's League";
    key = 1;
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 Fighter *Champions::buyFighter(int choice)
 {
    return nullptr;
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 Champions::~Champions()
 {
    destroyTeam();
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 void Champions::buildTeam(int opponent)
 {
    for (int i = 0; i < opponent; i++)
@@ -43,6 +52,9 @@ void Champions::buildTeam(int opponent)
       }
    }
 }
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 std::queue<Fighter *> *Champions::getTeam()
 {
    return &enemy;

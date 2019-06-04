@@ -6,23 +6,31 @@
 *******************************************************************************/
 
 #include "WarZone.hpp"
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 WarZone::WarZone()
 {
    locName = "War Zone";
    key = 1;
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 Fighter *WarZone::buyFighter(int choice)
 {
    return nullptr;
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 WarZone::~WarZone()
 {
    destroyTeam();
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 void WarZone::buildTeam(int opponent)
 {
 
@@ -55,12 +63,16 @@ void WarZone::buildTeam(int opponent)
       }
    }
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 std::queue<Fighter *> *WarZone::getTeam()
 {
    return &enemy;
 }
-
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 void WarZone::destroyTeam()
 {
    //remove front node until the list is empty

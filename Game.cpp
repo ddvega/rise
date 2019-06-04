@@ -7,6 +7,9 @@
 
 #include "Game.hpp"
 
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 Game::Game()
 {
    bank = 0;
@@ -578,10 +581,6 @@ void Game::printCup()
    {
       map[points[i].first][points[i].second] = '*';
    }
-
-
-
-
 
 
    //print map
