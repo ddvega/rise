@@ -10,9 +10,6 @@
 
 int main()
 {
-   //Game t;
-   //t.printCup();
-   //int test = getch("c");
    int key;
    srand(time(nullptr));
    clearScreen(50);

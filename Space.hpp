@@ -26,6 +26,7 @@ protected:
    std::string locName;
    Fighter *fighter;
    int key;
+   int visa;
 public:
    //constructor and destructor
    Space();
@@ -38,13 +39,16 @@ public:
    void setBottom(Space *&);
    void setLocName(std::string);
    void setKey(int);
-   int getKey();
+   void setVisa(int);
+   int getVisa();
+
 
    //getters
    Space *getTop();
    Space *getRight();
    Space *getLeft();
    Space *getBottom();
+   int getKey();
 
    std::string getLocationName();
 

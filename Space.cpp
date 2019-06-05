@@ -17,6 +17,7 @@ Space::Space()
    bottom = nullptr;
    fighter = nullptr;
    locName = "nowhere";
+
 }
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.
@@ -98,9 +99,23 @@ void Space::setKey(int k)
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.
 *******************************************************************************/
+void Space::setVisa(int visa)
+{
+   this->visa = visa;
+}
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
 int Space::getKey()
 {
    return key;
+}
+/*******************************************************************************
+**  This function validates that digits and special characters are not used.
+*******************************************************************************/
+int Space::getVisa()
+{
+   return visa;
 }
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.

@@ -14,6 +14,7 @@ Champions::Champions()
 {
    locName = "Champion's League";
    key = 1;
+   visa = 0;
 }
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.

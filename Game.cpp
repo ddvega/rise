@@ -16,6 +16,7 @@ Game::Game()
    setSpaces();
    locator = mercenaryShop;
    keys = 0;
+   visa = 0;
 }
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
@@ -49,6 +50,7 @@ void Game::setSpaces()
    asiaTrain->setLeft(europeTrain);
    asiaTrain->setRight(east);
    asiaTrain->setLocName("Asia");
+   asiaTrain->setVisa(1);
 
    americasTrain->setBottom(west);
    americasTrain->setTop(mercenaryShop);
@@ -75,12 +77,25 @@ void Game::setSpaces()
 void Game::moveMenu()
 {
    {
-      std::cout << "You're currently in " << locator->getLocationName()
-                << "\nKey's in room: " << locator->getKey()
-                << "\n\nNavigation Keys"
+      std::cout << "You're currently in "
+                << locator->getLocationName()
+                << "\nKey's in territory: "
+                << locator->getKey()
+                << "\nVisa in territory: "
+                << locator->getVisa()
+                << "\n--------------------------------------------------------"
+                   "----------------------------------"
+                << "\nBank Balance: " << bank
+                << "\nKeys: " << keys
+                << "\nVisa: " << visa
+                << "\nTeam size: " << userTeam.size() << " warriors"
+                << "\n--------------------------------------------------------"
+                   "----------------------------------"
+
+                << "\n\nExploration keys"
                 << "\n[w] Move Up [s] Move Down [a] Move Left [d] Move Right"
-                << "\n[e] Enter space"
-                << "\n[q] Quit"
+                << "\n\nEntry and Exit keys"
+                << "\n[e] Enter space [q] Quit"
                 << std::endl;
 
    }
@@ -92,7 +107,6 @@ void Game::move(int &exit, int &enter)
 {
    int choice;
 
-   //std::cout << "location: " << locator->getLocationName() << std::endl;
    moveMenu();
    choice = getch("wasdeq");
    if (choice == 'w')
@@ -198,7 +212,7 @@ void Game::mShop()
 void Game::warSpace()
 {
    int bribe = rand() % 200000 + 1;
-   int choice;
+   int choice, buy = 0;
    std::cout << "You have entered " << locator->getLocationName()
              << "'s War Zone"
              << "\n\nA team of " << enemyFighters->size() << " warriors "
@@ -209,26 +223,46 @@ void Game::warSpace()
              << std::endl;
    printTeam(userTeam);
 
-   std::cout << "\n\nWhat will it be? Fight or Flight?"
-             << "\nThey demand a payment of "
-             << bribe
-             << " to pass without fighting"
-             << "\n[p] Pay fee"
-             << "\n[f] Fight"
-             << std::endl;
-   choice = getch("pf");
-   if (choice == 'p')
+   if (locator->getVisa() == 1)
    {
-      bank -= bribe;
+      std::cout << "\n\nIf your here to buy a key then there will be peace"
+                << "\nIf not, you better be ready to fight!"
+                << "\nEnter [b] to buy key or [s] for something else "
+                << std::endl;
+      buy = getch("bs");
+      if (buy == 'b')
+      {
+         std::cout << "You purchase a visa for $" << rand() % 50000
+                   << " dollars"
+                   << std::endl;
+         visa++;
+         locator->setVisa(0);
+      }
    }
-   else
+   if (buy != 'b')
    {
-      //training only for cash. Dont fight to kill. Make copy of userTeam;
-      //std::queue<Fighter*> copyUserTeam = userTeam;
-      clearScreen(60);
-      printMap();
-      fight(userTeam, *enemyFighters);
+      std::cout << "\n\nWhat will it be? Fight or Flight?"
+                << "\nThey demand a payment of "
+                << bribe
+                << " to pass without fighting"
+                << "\n[p] Pay fee"
+                << "\n[f] Fight"
+                << std::endl;
+      choice = getch("pf");
+      if (choice == 'p')
+      {
+         bank -= bribe;
+      }
+      else
+      {
+         //training only for cash. Dont fight to kill. Make copy of userTeam;
+         //std::queue<Fighter*> copyUserTeam = userTeam;
+         clearScreen(60);
+         //printMap();
+         fight(userTeam, *enemyFighters);
+      }
    }
+
 }
 /*******************************************************************************
 **  Function executes attack and defend, randomly deciding who attacks first
@@ -283,13 +317,45 @@ void Game::play()
          if (!userTeam.empty())
          {
 
-            enemyTeam->destroyTeam();
-            enterRoom = 0;
-            enemyTeam->buildTeam(userTeam.size());
-            enemyFighters = enemyTeam->getTeam();
-            warSpace();
-            std::cout << "Enter [c] to continue";
-            getch("cC");
+            if ((locator->getLocationName() == "Europe" ||
+               locator->getLocationName() == "West World") && visa == 1)
+            {
+               enemyTeam->destroyTeam();
+               enterRoom = 0;
+               enemyTeam->buildTeam(userTeam.size());
+               enemyFighters = enemyTeam->getTeam();
+               warSpace();
+               std::cout << "Enter [c] to continue";
+               getch("cC");
+               enterRoom = 0;
+            }
+            else if (locator->getLocationName() == "East World" ||
+               locator->getLocationName() == "Americas" ||
+               locator->getLocationName() == "Asia")
+            {
+               enemyTeam->destroyTeam();
+               enterRoom = 0;
+               enemyTeam->buildTeam(userTeam.size());
+               enemyFighters = enemyTeam->getTeam();
+               warSpace();
+               std::cout << "Enter [c] to continue";
+               getch("cC");
+               enterRoom = 0;
+            }
+            else
+            {
+               std::cout << "You need a visa to enter this territory!"
+                         << "\nExplore the territories until you find one that"
+                         << " can provide you with a visa" << std::endl;
+               int fine = rand() % 100000 + 1;
+               std::cout << "You've been fined $" << fine
+                         << " for trying to enter this territory illegaly"
+                         << std::endl;
+               bank -= fine;
+               std::cout << "Enter [c] to continue";
+               getch("cC");
+               enterRoom = 0;
+            }
          }
          else
          {
@@ -305,11 +371,15 @@ void Game::play()
 
          clearScreen(60);
          printMap();
-         std::cout << "Bank Balance: " << bank << std::endl;
+         move(choice, enterRoom);
+         /*std::cout << "Bank Balance: " << bank << std::endl;
          std::cout << "Keys: " << keys << std::endl;
+         std::cout << "Visa: " << visa << std::endl;
          std::cout << "Team size: " << userTeam.size() << " warriors" <<
                    std::endl;
-         move(choice, enterRoom);
+         std::cout << "--------------------------------------------------------"
+                      "----------------------------------"
+                   << std::endl;*/
       }
       if (bank <= 0 || (bank < 10000 && userTeam.empty()))
       {
@@ -318,7 +388,10 @@ void Game::play()
       }
       if (keys == 6)
       {
-         std::cout << "You are the new world champion" << std::endl;
+         clearScreen(50);
+         printCup();
+         std::cout << "CONGRATULATIONS!!! You are the new world champion"
+                   << std::endl;
          choice = 2;
       }
 
@@ -486,6 +559,7 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
                //take key from enemy
                locator->setKey(-1);
             }
+
             else
             {
                std::cout << "You already took the key from this zone"
@@ -534,36 +608,25 @@ void Game::printTeam(std::queue<Fighter *> q)
 *******************************************************************************/
 void Game::printCup()
 {
-   int xSize = 24;
-   int ySize = 90;
    int count = 0;
-   char map[xSize][ySize];
-   for (int x = 0; x < xSize; x++)
-   {
-      for (int y = 0; y < ySize; y++)
-      {
-         map[x][0] = '|';
-         map[x][ySize - 1] = '|';
-         map[0][y] = '-';
-         map[xSize - 1][y] = '-';
-      }
-   }
+   char map[24][90];
+
    //set the white spaces
-   for (int x = 1; x < xSize - 1; x++)
+   for (int x = 0; x < 24; x++)
    {
-      for (int y = 1; y < ySize - 1; y++)
+      for (int y = 0; y < 90; y++)
       {
          map[x][y] = ' ';
       }
       count++;
    }
    std::vector<std::pair<int, int>> points;
-   points.emplace_back(1, 12);//"Y"
+   points.emplace_back(1, 12);//Y
    points.emplace_back(1, 18);
    points.emplace_back(2, 15);
    points.emplace_back(3, 15);
    points.emplace_back(4, 15);
-   points.emplace_back(1, 21);//"U"
+   points.emplace_back(1, 21);//O
    points.emplace_back(1, 24);
    points.emplace_back(1, 27);
    points.emplace_back(2, 21);
@@ -573,21 +636,97 @@ void Game::printCup()
    points.emplace_back(4, 21);
    points.emplace_back(4, 24);
    points.emplace_back(4, 27);
-
-
+   points.emplace_back(1, 30);//U
+   points.emplace_back(2, 30);
+   points.emplace_back(3, 30);
+   points.emplace_back(4, 30);
+   points.emplace_back(4, 33);
+   points.emplace_back(4, 36);
+   points.emplace_back(1, 36);
+   points.emplace_back(2, 36);
+   points.emplace_back(3, 36);
+   points.emplace_back(1, 54);//W
+   points.emplace_back(2, 54);
+   points.emplace_back(3, 54);
+   points.emplace_back(4, 54);
+   points.emplace_back(3, 57);
+   points.emplace_back(2, 60);
+   points.emplace_back(3, 63);
+   points.emplace_back(4, 66);
+   points.emplace_back(1, 66);
+   points.emplace_back(2, 66);
+   points.emplace_back(3, 66);
+   points.emplace_back(1, 69);//I
+   points.emplace_back(2, 69);
+   points.emplace_back(3, 69);
+   points.emplace_back(4, 69);
+   points.emplace_back(1, 72);//N
+   points.emplace_back(2, 72);
+   points.emplace_back(3, 72);
+   points.emplace_back(4, 72);
+   points.emplace_back(2, 75);
+   points.emplace_back(3, 78);
+   points.emplace_back(4, 81);
+   points.emplace_back(3, 81);
+   points.emplace_back(2, 81);
+   points.emplace_back(1, 81);
+   points.emplace_back(6, 33);//champions cup
+   points.emplace_back(6, 36);
+   points.emplace_back(6, 39);
+   points.emplace_back(6, 42);
+   points.emplace_back(6, 45);
+   points.emplace_back(6, 48);
+   points.emplace_back(6, 51);
+   points.emplace_back(6, 54);
+   points.emplace_back(6, 57);
+   points.emplace_back(7, 33);
+   points.emplace_back(8, 33);
+   points.emplace_back(9, 33);
+   points.emplace_back(10, 33);
+   points.emplace_back(7, 57);
+   points.emplace_back(8, 57);
+   points.emplace_back(9, 57);
+   points.emplace_back(10, 57);
+   points.emplace_back(11, 36);
+   points.emplace_back(12, 39);
+   points.emplace_back(13, 42);
+   points.emplace_back(11, 54);
+   points.emplace_back(12, 51);
+   points.emplace_back(13, 48);
+   points.emplace_back(14, 48);
+   points.emplace_back(15, 48);
+   points.emplace_back(16, 48);
+   points.emplace_back(17, 48);
+   points.emplace_back(18, 48);
+   points.emplace_back(14, 42);
+   points.emplace_back(15, 42);
+   points.emplace_back(16, 42);
+   points.emplace_back(17, 42);
+   points.emplace_back(18, 42);
+   points.emplace_back(18, 39);
+   points.emplace_back(18, 36);
+   points.emplace_back(19, 36);
+   points.emplace_back(18, 51);
+   points.emplace_back(18, 54);
+   points.emplace_back(19, 54);
+   points.emplace_back(19, 39);
+   points.emplace_back(19, 42);
+   points.emplace_back(19, 45);
+   points.emplace_back(19, 48);
+   points.emplace_back(19, 51);
 
    //set borders
-   for (int i = 0; i < points.size(); i++)
+   for (unsigned int i = 0; i < points.size(); i++)
    {
-      map[points[i].first][points[i].second] = '*';
+      map[points[i].first][points[i].second] = '#';
    }
 
 
    //print map
-   for (int i = 0; i < xSize; i++)
+   for (int i = 0; i < 24; i++)
    {
       std::cout << std::endl;
-      for (int c = 0; c < ySize; c++)
+      for (int c = 0; c < 90; c++)
          std::cout << map[i][c];
    }
    std::cout << std::endl;
@@ -598,24 +737,22 @@ void Game::printCup()
 *******************************************************************************/
 void Game::printMap()
 {
-   int xSize = 24;
-   int ySize = 90;
    int count = 0;
-   char map[xSize][ySize];
-   for (int x = 0; x < xSize; x++)
+   char map[24][90];
+   for (int x = 0; x < 24; x++)
    {
-      for (int y = 0; y < ySize; y++)
+      for (int y = 0; y < 90; y++)
       {
          map[x][0] = '|';
-         map[x][ySize - 1] = '|';
+         map[x][90 - 1] = '|';
          map[0][y] = '-';
-         map[xSize - 1][y] = '-';
+         map[24 - 1][y] = '-';
       }
    }
    //set the white spaces
-   for (int x = 1; x < xSize - 1; x++)
+   for (int x = 1; x < 24 - 1; x++)
    {
-      for (int y = 1; y < ySize - 1; y++)
+      for (int y = 1; y < 90 - 1; y++)
       {
          map[x][y] = ' ';
       }
@@ -913,10 +1050,10 @@ void Game::printMap()
    map[3][42] = 'A';
 
    //print map
-   for (int i = 0; i < xSize; i++)
+   for (int i = 0; i < 24; i++)
    {
       std::cout << std::endl;
-      for (int c = 0; c < ySize; c++)
+      for (int c = 0; c < 90; c++)
          std::cout << map[i][c];
    }
    std::cout << std::endl;

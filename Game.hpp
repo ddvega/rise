@@ -28,6 +28,7 @@ protected:
    std::queue<Fighter *> *enemyFighters;
    int bank;
    int keys;
+   int visa;
    Fighter *fighter;
    Space *locator;
    Space *mercenaryShop;

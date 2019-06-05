@@ -13,6 +13,7 @@ MercenaryShop::MercenaryShop()
 {
    locName = "Mercenary Shop";
    key = 0;
+   visa = 0;
 }
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.
