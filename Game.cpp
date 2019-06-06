@@ -83,14 +83,12 @@ void Game::moveMenu()
                 << locator->getKey()
                 << "\nVisa in territory: "
                 << locator->getVisa()
-                << "\n--------------------------------------------------------"
-                   "----------------------------------"
-                << "\nBank Balance: " << bank
+                << "\n---------------------------------"
+                << "\nBank Balance: $" << bank
                 << "\nKeys: " << keys
                 << "\nVisa: " << visa
                 << "\nTeam size: " << userTeam.size() << " warriors"
-                << "\n--------------------------------------------------------"
-                   "----------------------------------"
+                << "\n---------------------------------"
 
                 << "\n\nExploration keys"
                 << "\n[w] Move Up [s] Move Down [a] Move Left [d] Move Right"
@@ -114,6 +112,7 @@ void Game::move(int &exit, int &enter)
       if (locator->getTop() != nullptr)
       {
          locator = locator->getTop();
+         bank -= 1000;
       }
    }
    else if (choice == 's')
@@ -121,6 +120,8 @@ void Game::move(int &exit, int &enter)
       if (locator->getBottom() != nullptr)
       {
          locator = locator->getBottom();
+         bank -= 1000;
+
       }
    }
    else if (choice == 'a')
@@ -128,6 +129,8 @@ void Game::move(int &exit, int &enter)
       if (locator->getLeft() != nullptr)
       {
          locator = locator->getLeft();
+         bank -= 1000;
+
       }
    }
    else if (choice == 'd')
@@ -135,6 +138,8 @@ void Game::move(int &exit, int &enter)
       if (locator->getRight() != nullptr)
       {
          locator = locator->getRight();
+         bank -= 1000;
+
       }
    }
    else if (choice == 'e')
@@ -157,7 +162,7 @@ void Game::mShop()
    do
    {
       clearScreen(50);
-      std::cout << "Bank Balance: " << bank
+      std::cout << "Bank Balance: $" << bank
                 << "\nKeys: " << keys
                 << "\nTeam size: " << userTeam.size() << " warriors"
                 << "\n\n\nWelcome to the Mercenary Shop"
@@ -368,18 +373,9 @@ void Game::play()
 
       if (choice == 1)
       {
-
          clearScreen(60);
          printMap();
          move(choice, enterRoom);
-         /*std::cout << "Bank Balance: " << bank << std::endl;
-         std::cout << "Keys: " << keys << std::endl;
-         std::cout << "Visa: " << visa << std::endl;
-         std::cout << "Team size: " << userTeam.size() << " warriors" <<
-                   std::endl;
-         std::cout << "--------------------------------------------------------"
-                      "----------------------------------"
-                   << std::endl;*/
       }
       if (bank <= 0 || (bank < 10000 && userTeam.empty()))
       {
@@ -534,11 +530,11 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
             std::cout << "\nEnemy Wins " << t2Points << " to " << t1Points
                       << std::endl << std::endl;
             //enemy took a key from you
-            if (keys >= 1)
+            if (keys >= 1 && locator->getLocationName() != "Champion's League")
             {
                std::cout << "Enemy has taken one of your keys" << std::endl;
                keys--;
-               //take key from enemy
+               //enemy takes key
                locator->setKey(1);
             }
 
@@ -739,7 +735,7 @@ void Game::printMap()
 {
    int count = 0;
    char map[24][90];
-   for (int x = 0; x < 24; x++)
+   /*for (int x = 0; x < 24; x++)
    {
       for (int y = 0; y < 90; y++)
       {
@@ -748,11 +744,12 @@ void Game::printMap()
          map[0][y] = '-';
          map[24 - 1][y] = '-';
       }
-   }
+   }*/
+
    //set the white spaces
-   for (int x = 1; x < 24 - 1; x++)
+   for (int x = 0; x < 24; x++)
    {
-      for (int y = 1; y < 90 - 1; y++)
+      for (int y = 0; y < 90; y++)
       {
          map[x][y] = ' ';
       }

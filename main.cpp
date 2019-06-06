@@ -28,6 +28,7 @@ int main()
 
    std::cout << "\nEnter [p] to proceed";
    key = getch("pq");
+   clearScreen(50);
    std::cout << "\n\nEvery year the most powerful "
                 "gangs in"
                 " the world compete in a war \ntournament. Their smartest and "
@@ -50,15 +51,21 @@ int main()
 
    std::cout << "\nEnter [p] to proceed";
    key = getch("p");
+   clearScreen(50);
    std::cout << "\nRules of Engagement"
                 "\n\nYou start with a bank balance. With that balance you'll"
                 "\nbe able to build your team of mercenaries by entering the"
-                "\nWar Shop. If you run out of money, you will be executed"
-                "\nand the game will be over."
+                "\nWar Shop."
                 "\n\nWith each battle that you fight, you will either earn"
-                "\nmoney if you win or lose money if you lose."
+                "\nmoney if you win or lose money if you lose. If you run out "
+                "\nof money the game is over."
+                "\n\nRemember...Traveling costs money. Moving from one "
+                "territory \nto another will cost you $1000 a journey"
+                "\nAlso, in order to enter the west or europe, you need a visa"
+                "\nThere's only one region that will sell you a visa, find it "
+                "\nand make your purchase. "
                 "\n\nBuild your team, win five keys, enter Champions league"
-                "\nand defeat the champion!"
+                "\nand defeat the champion! Good luck"
              << std::endl;
 
    std::cout << "\nEnter [p] to proceed or [q] to exit";
