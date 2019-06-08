@@ -19,7 +19,7 @@ Champions::Champions()
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.
 *******************************************************************************/
-Fighter *Champions::buyFighter(int choice)
+Fighter *Champions::buyFighter(int choice, int &money)
 {
    return nullptr;
 }

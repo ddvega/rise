@@ -8,7 +8,7 @@
 #include "Game.hpp"
 
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default constructor
 *******************************************************************************/
 Game::Game()
 {
@@ -19,10 +19,11 @@ Game::Game()
    visa = 0;
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Sets the game's spaces and links them with four pointers
 *******************************************************************************/
 void Game::setSpaces()
 {
+   //6 spaces, three derived (MercenaryShop, Champions, WarZone)
    mercenaryShop = new MercenaryShop;
    west = new WarZone;
    east = new WarZone;
@@ -32,39 +33,34 @@ void Game::setSpaces()
    champLeague = new Champions;
    enemyTeam = new WarZone;
 
-   mercenaryShop->setBottom(americasTrain);
+   //set top, left, right, bottom pointers for all spaces
+   mercenaryShop->setBottom(americasTrain); //mercenaryShop Space
    mercenaryShop->setTop(asiaTrain);
    mercenaryShop->setLeft(europeTrain);
    mercenaryShop->setRight(champLeague);
    mercenaryShop->setLocName("War Shop");
-
-   west->setTop(europeTrain);
+   west->setTop(europeTrain);               //west
    west->setRight(americasTrain);
    west->setLocName("West World");
-
-   east->setLeft(asiaTrain);
+   east->setLeft(asiaTrain);                //east
    east->setBottom(champLeague);
    east->setLocName("East World");
-
-   asiaTrain->setBottom(mercenaryShop);
+   asiaTrain->setBottom(mercenaryShop);     //asia
    asiaTrain->setLeft(europeTrain);
    asiaTrain->setRight(east);
    asiaTrain->setLocName("Asia");
    asiaTrain->setVisa(1);
-
-   americasTrain->setBottom(west);
+   americasTrain->setBottom(west);          //americas
    americasTrain->setTop(mercenaryShop);
    americasTrain->setRight(champLeague);
    americasTrain->setLeft(west);
    americasTrain->setLocName("Americas");
-
-   europeTrain->setBottom(west);
+   europeTrain->setBottom(west);            //europe
    europeTrain->setTop(asiaTrain);
    europeTrain->setRight(mercenaryShop);
    europeTrain->setLeft(west);
    europeTrain->setLocName("Europe");
-
-   champLeague->setBottom(americasTrain);
+   champLeague->setBottom(americasTrain);   //champion's league
    champLeague->setTop(east);
    champLeague->setRight(east);
    champLeague->setLeft(mercenaryShop);
@@ -72,34 +68,30 @@ void Game::setSpaces()
 
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Prints game data and navigation keys
 *******************************************************************************/
 void Game::moveMenu()
 {
-   {
-      std::cout << "You're currently in "
-                << locator->getLocationName()
-                << "\nKey's in territory: "
-                << locator->getKey()
-                << "\nVisa in territory: "
-                << locator->getVisa()
-                << "\n---------------------------------"
-                << "\nBank Balance: $" << bank
-                << "\nKeys: " << keys
-                << "\nVisa: " << visa
-                << "\nTeam size: " << userTeam.size() << " warriors"
-                << "\n---------------------------------"
-
-                << "\n\nExploration keys"
-                << "\n[w] Move Up [s] Move Down [a] Move Left [d] Move Right"
-                << "\n\nEntry and Exit keys"
-                << "\n[e] Enter space [q] Quit"
-                << std::endl;
-
-   }
+   std::cout << "You're currently in "
+             << locator->getLocationName()
+             << "\nKey's in territory: "
+             << locator->getKey()
+             << "\nVisa in territory: "
+             << locator->getVisa()
+             << "\n---------------------------------"
+             << "\nBank Balance: $" << bank
+             << "\nKeys: " << keys
+             << "\nVisa: " << visa
+             << "\nTeam size: " << userTeam.size() << " warriors"
+             << "\n---------------------------------"
+             << "\n\nExploration keys"
+             << "\n[w] Move Up [s] Move Down [a] Move Left [d] Move Right"
+             << "\n\nEntry and Exit keys"
+             << "\n[e] Enter space [q] Quit"
+             << std::endl;
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Moves the locator pointer to new spaces based on user selection
 *******************************************************************************/
 void Game::move(int &exit, int &enter)
 {
@@ -107,7 +99,7 @@ void Game::move(int &exit, int &enter)
 
    moveMenu();
    choice = getch("wasdeq");
-   if (choice == 'w')
+   if (choice == 'w') //move up
    {
       if (locator->getTop() != nullptr)
       {
@@ -115,16 +107,15 @@ void Game::move(int &exit, int &enter)
          bank -= 1000;
       }
    }
-   else if (choice == 's')
+   else if (choice == 's') //move down
    {
       if (locator->getBottom() != nullptr)
       {
          locator = locator->getBottom();
          bank -= 1000;
-
       }
    }
-   else if (choice == 'a')
+   else if (choice == 'a') //move left
    {
       if (locator->getLeft() != nullptr)
       {
@@ -133,20 +124,19 @@ void Game::move(int &exit, int &enter)
 
       }
    }
-   else if (choice == 'd')
+   else if (choice == 'd') //move right
    {
       if (locator->getRight() != nullptr)
       {
          locator = locator->getRight();
          bank -= 1000;
-
       }
    }
-   else if (choice == 'e')
+   else if (choice == 'e') //enter a space
    {
       enter = 1;
    }
-   else if (choice == 'q')
+   else if (choice == 'q') //quit game
    {
       exit = 2;
    }
@@ -154,7 +144,7 @@ void Game::move(int &exit, int &enter)
 }
 
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Used in mercenaryShop space to create a marketplace to purchase fighters
 *******************************************************************************/
 void Game::mShop()
 {
@@ -166,7 +156,7 @@ void Game::mShop()
                 << "\nKeys: " << keys
                 << "\nTeam size: " << userTeam.size() << " warriors"
                 << "\n\n\nWelcome to the Mercenary Shop"
-                << "\n\nPlease select the fighter you want to purchase"
+                << "\n\nPlease select the fighter you want to hire"
                 << "\n1. GRU Spetsnaz Solder $10,000"
                 << "\n2. Chinese Special Operative $20,000"
                 << "\n3. SAS operative $ 50,000"
@@ -174,53 +164,41 @@ void Game::mShop()
                 << "\n5. Leave War Shop"
                 << std::endl;
       answer = maxMinIntOnly(1, 5);
-      if (answer == 1)
-      {
-         cost = 10000;
-      }
-      if (answer == 2)
-      {
-         cost = 20000;
-      }
-      if (answer == 3)
-      {
-         cost = 50000;
-      }
-      if (answer == 4)
-      {
-         cost = 100000;
-      }
 
       if (answer != 5)
       {
-         std::cout << "Quantity: ";
+         std::cout << "How many would you like to hire? ";
          quantity = maxMinIntOnly(1, 100);
          if (bank >= cost * quantity)
          {
             bank -= cost * quantity;
             for (int i = 0; i < quantity; i++)
             {
-               userTeam.push(locator->buyFighter(answer));
+               userTeam.push(locator->buyFighter(answer, cost));
             }
          }
          else
          {
-            std::cout << "You can't afford that" << std::endl;
+            std::cout << "You can't afford that"
+                      << "\nEnter [c] to continue";
+            getch("c");
          }
       }
    }
    while (answer != 5);
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  This function is activated when a user chooses to enter all spaces
+**  except the mercenaryShop. User can fight or buy a visa.  User loses or
+**  makes money when they lose or win. If user see's the army they are facing
+**  is too strong, they can choose to pay the army for safe passage instead of
+**  fighting them. The cost will be random.
 *******************************************************************************/
 void Game::warSpace()
 {
    int bribe = rand() % 200000 + 1;
    int choice, buy = 0;
-   std::cout << "You have entered " << locator->getLocationName()
-             << "'s War Zone"
-             << "\n\nA team of " << enemyFighters->size() << " warriors "
+   std::cout << "\nA team of " << enemyFighters->size() << " warriors "
              << std::endl;
    printTeam(*enemyFighters);
    std::cout << "\n       awaits"
@@ -261,16 +239,15 @@ void Game::warSpace()
       else
       {
          //training only for cash. Dont fight to kill. Make copy of userTeam;
-         //std::queue<Fighter*> copyUserTeam = userTeam;
          clearScreen(60);
-         //printMap();
          fight(userTeam, *enemyFighters);
       }
    }
 
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Initiates the game into a while loop that wont stop until either the
+**  player wins, loses or quits.
 *******************************************************************************/
 void Game::play()
 {
@@ -396,7 +373,7 @@ void Game::play()
 }
 
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Function to randomly decide which fighter will strike first
 *******************************************************************************/
 void Game::hitFirst(Fighter *one, Fighter *two, int pick)
 {
@@ -426,7 +403,8 @@ void Game::hitFirst(Fighter *one, Fighter *two, int pick)
 
 }
 /*******************************************************************************
-**  Function activates game by having two characters fight until one dies
+**  Function initiates fight sequence between two fighters in army. While
+**  loop exits when one of the armies is out of fighters.
 *******************************************************************************/
 void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
 {
@@ -548,8 +526,9 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
             {
                bonus = rand() % 100000 + 1;
                bank += bonus;
-               std::cout << "You've taken you're enemy's key and "
-                         << bonus << " dollars of their money"
+               std::cout << "You've take a key, $"
+                         << money << " dollars in fight pay, and"
+                         << bonus << " dollars from the enemy's coffers!"
                          << std::endl;
                keys++;
                //take key from enemy
@@ -577,14 +556,13 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
 
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  prints all the fighters in an army
 *******************************************************************************/
 void Game::printTeam(std::queue<Fighter *> q)
 {
    int count = 0;
    std::queue<Fighter *> q2;
    q2 = q;
-   //std::cout << "Team: ";
    while (!q.empty())
    {
       count++;
@@ -600,7 +578,7 @@ void Game::printTeam(std::queue<Fighter *> q)
    std::cout << std::endl;
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Prints a trophy and a "you win" message when the user wins
 *******************************************************************************/
 void Game::printCup()
 {
@@ -729,22 +707,12 @@ void Game::printCup()
 
 }
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Prints the map for the user to see and navigate in linked spaces
 *******************************************************************************/
 void Game::printMap()
 {
    int count = 0;
    char map[24][90];
-   /*for (int x = 0; x < 24; x++)
-   {
-      for (int y = 0; y < 90; y++)
-      {
-         map[x][0] = '|';
-         map[x][90 - 1] = '|';
-         map[0][y] = '-';
-         map[24 - 1][y] = '-';
-      }
-   }*/
 
    //set the white spaces
    for (int x = 0; x < 24; x++)
@@ -1004,7 +972,6 @@ void Game::printMap()
    }
 
    //print labels
-
    map[18][9] = 'W';
    map[18][12] = 'E';
    map[18][15] = 'S';
@@ -1057,7 +1024,8 @@ void Game::printMap()
 }
 
 /*******************************************************************************
-**  Function executes attack and defend, randomly deciding who attacks first
+**  Default destuctor empties user army and deletes all memory allocated for
+**  the 6 spaces
 *******************************************************************************/
 Game::~Game()
 {

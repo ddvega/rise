@@ -18,7 +18,7 @@ WarZone::WarZone()
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.
 *******************************************************************************/
-Fighter *WarZone::buyFighter(int choice)
+Fighter *WarZone::buyFighter(int choice, int &money)
 {
    return nullptr;
 }

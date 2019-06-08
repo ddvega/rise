@@ -53,7 +53,7 @@ public:
    std::string getLocationName();
 
    //pure virtual functions overridden in derived classes
-   virtual Fighter *buyFighter(int choice) = 0;
+   virtual Fighter *buyFighter(int, int &) = 0;
    virtual void buildTeam(int opponent) = 0;
    virtual std::queue<Fighter *> *getTeam() = 0;
    virtual void destroyTeam() = 0;

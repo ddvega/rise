@@ -18,26 +18,30 @@ MercenaryShop::MercenaryShop()
 /*******************************************************************************
 **  This function validates that digits and special characters are not used.
 *******************************************************************************/
-Fighter *MercenaryShop::buyFighter(int choice)
+Fighter *MercenaryShop::buyFighter(int choice, int &money)
 {
 
    if (choice == 1)
    {
+      money = 1000;
       Fighter *g = new Gru;
       return g;
    }
    else if (choice == 2)
    {
+      money = 20000;
       Fighter *c = new ChineseSOP;
       return c;
    }
    else if (choice == 3)
    {
+      money = 50000;
       Fighter *s = new SAS;
       return s;
    }
-   else
+   else if (choice == 4)
    {
+      money = 100000;
       Fighter *seal = new Seal;
       return seal;
    }

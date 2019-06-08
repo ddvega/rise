@@ -19,7 +19,7 @@ public:
    WarZone();
    ~WarZone() override;
    void buildTeam(int opponent) override;
-   Fighter *buyFighter(int choice) override;
+   Fighter *buyFighter(int choice, int &) override;
    std::queue<Fighter *> *getTeam() override;
    void destroyTeam();
 

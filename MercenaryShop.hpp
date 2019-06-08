@@ -22,7 +22,7 @@ protected:
 public:
    MercenaryShop();
    void buildTeam(int opponent) override;
-   Fighter *buyFighter(int choice) override;
+   Fighter *buyFighter(int choice, int &) override;
    ~MercenaryShop() override;
    std::queue<Fighter *> *getTeam() override;
    void destroyTeam();
