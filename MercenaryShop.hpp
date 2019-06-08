@@ -2,7 +2,9 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a derived class of the Space class. The purpose of
+**                this class is to provide the user with a space that acts as a
+**                marketplace of fighters
 *******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__MERCENARYSHOP_HPP

@@ -2,7 +2,9 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a base class responsible for setting a fighter with
+**                various characteristics that will fight against other
+**                fighters.
 *******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__FIGHTER_HPP
@@ -22,6 +24,7 @@ protected:
    bool killed;
 
 public:
+   //constructor and destructor
    Fighter();
    virtual ~Fighter();
 
@@ -29,14 +32,12 @@ public:
    bool dead();
    std::string getName();
    void harden();
-   int getArmor();
 
    //pure virtual functions overridden in derived classes
    virtual int attack() = 0;
    virtual int attackDice() = 0;
    virtual int defendDice() = 0;
    virtual void defend(int) = 0;
-
 };
 
 #endif //RISE_THROUGH_THE_RANKS__FIGHTER_HPP

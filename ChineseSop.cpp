@@ -2,7 +2,9 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a derived class of the Fighter class. This class
+**                creates a fighter character called Chinese Operative that
+**                ranks 3rd in overall power compared to the other characters
 *******************************************************************************/
 
 #include "ChineseSop.hpp"

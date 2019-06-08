@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug"/>
+				<Option working_dir="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug"/>
+				<Option working_dir="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rise_through_the_ranks">
-				<Option output="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/rise_through_the_ranks" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug"/>
+				<Option output="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/rise_through_the_ranks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -42,15 +42,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rise_through_the_ranks"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rise_through_the_ranks"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rise_through_the_ranks/fast">
-				<Option output="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/rise_through_the_ranks" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug"/>
+				<Option output="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/rise_through_the_ranks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,93 +63,93 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rise_through_the_ranks/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 rise_through_the_ranks/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/davidsan/162/rise-through-the-ranks/cmake-build-debug"/>
+				<Option working_dir="/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Champions.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Champions.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Champions.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Champions.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/ChineseSop.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/ChineseSop.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/ChineseSop.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/ChineseSop.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Fighter.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Fighter.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Fighter.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Fighter.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Game.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Game.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Game.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Game.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Gru.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Gru.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Gru.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Gru.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/MercenaryShop.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/MercenaryShop.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/MercenaryShop.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/MercenaryShop.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Sas.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Sas.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Sas.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Sas.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Seal.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Seal.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Seal.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Seal.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Space.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Space.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Space.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Space.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Validation.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Validation.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/Validation.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/Validation.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/WarZone.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/WarZone.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/WarZone.hpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/WarZone.hpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/main.cpp">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/main.cpp">
 			<Option target="rise_through_the_ranks"/>
 		</Unit>
-		<Unit filename="/home/davidsan/162/rise-through-the-ranks/CMakeLists.txt">
+		<Unit filename="/home/davidsan/osu/162/rise-through-the-ranks/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

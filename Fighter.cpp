@@ -2,7 +2,9 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a base class responsible for setting a fighter with
+**                various characteristics that will fight against other
+**                fighters.
 *******************************************************************************/
 
 #include "Fighter.hpp"
@@ -32,20 +34,11 @@ std::string Fighter::getName()
    return name;
 }
 /*******************************************************************************
-**  Returns name of character
-*******************************************************************************/
-int Fighter::getArmor()
-{
-   return armor;
-}
-/*******************************************************************************
-**  Returns name of character
+**  Adds strength to fighter
 *******************************************************************************/
 void Fighter::harden()
 {
    strength += 5;
-   //armor += 1;
-
 }
 /*******************************************************************************
 **  Default destructor for base class

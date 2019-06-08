@@ -2,7 +2,8 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a base class that has four pointers used to connect
+**                to other spaces above, below, to the left and to the right
 *******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__SPACE_HPP
@@ -42,14 +43,12 @@ public:
    void setVisa(int);
    int getVisa();
 
-
    //getters
    Space *getTop();
    Space *getRight();
    Space *getLeft();
    Space *getBottom();
    int getKey();
-
    std::string getLocationName();
 
    //pure virtual functions overridden in derived classes
@@ -57,7 +56,6 @@ public:
    virtual void buildTeam(int opponent) = 0;
    virtual std::queue<Fighter *> *getTeam() = 0;
    virtual void destroyTeam() = 0;
-
 };
 
 #endif //RISE_THROUGH_THE_RANKS__SPACE_HPP

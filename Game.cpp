@@ -2,7 +2,8 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is the Game class responsible for grouping all of the
+**                game's functions and making them interact.
 *******************************************************************************/
 
 #include "Game.hpp"
@@ -12,11 +13,49 @@
 *******************************************************************************/
 Game::Game()
 {
-   items.cash = 0;
    setSpaces();
    locator = mercenaryShop;
    items.keys = 0;
    items.visa = 0;
+   items.cash = 0;
+}
+/*******************************************************************************
+**  Randomly charges an entry fee
+*******************************************************************************/
+bool Game::payEntry(int &cBal)
+{
+   int manager = rand() % 3 + 1;
+   bool paid = false;
+   int payDude;
+   if (manager == 1)
+   {
+      int fee = rand() % 50000 + 1;
+      clearScreen(50);
+      std::cout << "You must pay a bribe of $" << fee
+                << " dollars to enter this region"
+                << std::endl;
+      if (cBal < fee)
+      {
+         std::cout << "You dont have enough cash" << std::endl;
+      }
+      else
+      {
+         std::cout << "Enter [p] to pay or [r] refuse" << std::endl;
+         payDude = getch("pr");
+         if (payDude == 'p')
+         {
+            cBal -= fee;
+            paid = true;
+            std::cout << "Bribe paid. Thank you" << std::endl;
+         }
+      }
+
+   }
+   else
+   {
+      paid = true;
+   }
+   return paid;
 }
 /*******************************************************************************
 **  Sets the game's spaces and links them with four pointers
@@ -66,7 +105,6 @@ void Game::setSpaces()
    champLeague->setLeft(mercenaryShop);
    champLeague->setLocName("Champion's League");
 
-
 }
 /*******************************************************************************
 **  Prints game data and navigation keys
@@ -80,7 +118,8 @@ void Game::moveMenu()
              << "\nVisa in territory: "
              << locator->getVisa()
              << "\n---------------------------------"
-             << "\nBank Balance: $" << items.cash
+             << "\nBackpack items"
+             << "\nCash: $" << items.cash
              << "\nKeys: " << items.keys
              << "\nVisa: " << items.visa
              << "\nTeam size: " << userTeam.size() << " warriors"
@@ -153,7 +192,7 @@ void Game::mShop()
    do
    {
       clearScreen(50);
-      std::cout << "Bank Balance: $" << items.cash
+      std::cout << "Cash Balance: $" << items.cash
                 << "\nKeys: " << items.keys
                 << "\nTeam size: " << userTeam.size() << " warriors"
                 << "\n\n\nWelcome to the Mercenary Shop"
@@ -198,22 +237,22 @@ void Game::mShop()
 *******************************************************************************/
 void Game::warSpace()
 {
-   int bribe = rand() % 200000 + 1;
+   int bribe = rand() % 100000 + 1;
    int choice, buy = 0;
    std::cout << "\nA team of " << enemyFighters->size() << " warriors "
              << std::endl;
    printTeam(*enemyFighters);
-   std::cout << "\n       awaits"
+   std::cout << "\n-------awaits-----------------------------------------------"
              << "\n\nYour team of " << userTeam.size() << " warriors"
              << std::endl;
    printTeam(userTeam);
 
    if (locator->getVisa() == 1)
    {
-      std::cout << "\n\nIf your here to buy a key then there will be peace"
+      std::cout << "\n\nIf your here to buy a visa then there will be peace"
                 << "\nIf not, you better be ready to fight!"
                 << "\nEnter [b] to buy key or [s] for something else "
-                << std::endl;
+                << std::endl << std::endl;
       buy = getch("bs");
       if (buy == 'b')
       {
@@ -253,7 +292,7 @@ void Game::warSpace()
 *******************************************************************************/
 void Game::play()
 {
-   items.cash = 100000 + (rand() % 1000000 + 100000);
+   items.cash = 600000;
    int choice = 1, enterRoom = 0;
    do
    {
@@ -261,7 +300,6 @@ void Game::play()
       if (locator->getLocationName() == "War Shop" && enterRoom == 1)
       {
          clearScreen(60);
-         //printMap();
          enterRoom = 0;
          mShop();
       }
@@ -298,9 +336,9 @@ void Game::play()
          enterRoom == 1)
       {
          clearScreen(60);
-         if (!userTeam.empty())
+         bool bribeOfficer = payEntry(items.cash);
+         if (!userTeam.empty() && bribeOfficer)
          {
-
             if ((locator->getLocationName() == "Europe" ||
                locator->getLocationName() == "West World") && items.visa == 1)
             {
@@ -343,7 +381,9 @@ void Game::play()
          }
          else
          {
-            std::cout << "You may not enter without warriors" << std::endl;
+            clearScreen(60);
+            std::cout << "Make sure you have at least 1 warrior and that you "
+                         "pay bribes to enter territory" << std::endl;
             std::cout << "Enter [c] to continue";
             getch("cC");
             enterRoom = 0;
@@ -358,15 +398,23 @@ void Game::play()
       }
       if (items.cash <= 0 || (items.cash < 10000 && userTeam.empty()))
       {
-         std::cout << "You ran out of money. GAME OVER." << std::endl;
+         clearScreen(60);
+         for (int i = 0; i < 25; i++)
+         {
+            std::cout << "You ran out of money. GAME OVER." << std::endl;
+         }
          choice = 2;
       }
       if (items.keys == 6)
       {
          clearScreen(50);
          printCup();
-         std::cout << "CONGRATULATIONS!!! You are the new world champion"
-                   << std::endl;
+         for (int i = 0; i < 25; i++)
+         {
+            std::cout << "CONGRATULATIONS!!! You are the new world champion"
+                      << std::endl;
+         }
+
          choice = 2;
       }
 
@@ -529,8 +577,8 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
             {
                bonus = rand() % 100000 + 1;
                items.cash += bonus;
-               std::cout << "You've take a key, $"
-                         << money << " dollars in fight pay, and"
+               std::cout << "You took a key, $"
+                         << money << " dollars in fight pay, and "
                          << bonus << " dollars from the enemy's coffers!"
                          << std::endl;
                items.keys++;
@@ -547,15 +595,15 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
       }
    }
    while (!(uTeam.empty() || enemy.empty())); //kill loop if team empty
-   std::cout << "Bank Balance: " << items.cash;
+   std::cout << "Cash Balance: " << items.cash;
    items.cash += (money + bonus);
    std::cout << "\nYou earned: " << money + bonus
-             << "\nNew Bank Balance: "
+             << "\nNew Cash Balance: "
              << items.cash
              << std::endl;
-   std::cout << "\nEnemy Team Size: " << enemy.size() << std::endl;
-   std::cout << "Your Team Size: " << userTeam.size() << std::endl;
-   printTeam(userTeam);
+   std::cout << "\nEnemy Team Size: " << enemy.size()
+             << "\nYour Team Size: " << userTeam.size() << std::endl;
+   //printTeam(userTeam);
 
 }
 /*******************************************************************************

@@ -2,7 +2,12 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is the Main file for the Rise through the ranks
+**                program. This program is for the final project in CS162. The
+**                purpose of this game is to explore territories, enter them
+**                and fight armies with your army. Once you take a key from
+**                each territory you get to enter the champions league.  If you
+**                take the key from the champion's territory, you win the game.
 *******************************************************************************/
 #include <iostream>
 #include "Game.hpp"
@@ -53,7 +58,7 @@ int main()
    key = getch("p");
    clearScreen(50);
    std::cout << "\nRules of Engagement"
-                "\n\nYou start with a bank balance. With that balance you'll"
+                "\n\nYou start with a cash balance. With that balance you'll"
                 "\nbe able to build your team of mercenaries by entering the"
                 "\nWar Shop."
                 "\n\nWith each battle that you fight, you will either earn"
@@ -61,6 +66,8 @@ int main()
                 "\nof money the game is over."
                 "\n\nRemember...Traveling costs money. Moving from one "
                 "territory \nto another will cost you $1000 a journey"
+                "\nIn addition, some regions may require a bribe depending on"
+                "\nwho is managing the border at that time."
                 "\nAlso, in order to enter the west or europe, you need a visa"
                 "\nThere's only one region that will sell you a visa, find it "
                 "\nand make your purchase. "

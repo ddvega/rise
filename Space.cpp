@@ -2,7 +2,8 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a base class that has four pointers used to connect
+**                to other spaces above, below, to the left and to the right
 *******************************************************************************/
 
 #include "Space.hpp"
@@ -20,107 +21,104 @@ Space::Space()
 
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  sets the top pointer
 *******************************************************************************/
 void Space::setTop(Space *&top)
 {
    this->top = top;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  sets the location name
 *******************************************************************************/
 void Space::setLocName(std::string locName)
 {
    this->locName = locName;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  sets the right pointer
 *******************************************************************************/
 void Space::setRight(Space *&right)
 {
    this->right = right;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  sets the left pointer
 *******************************************************************************/
 void Space::setLeft(Space *&left)
 {
    this->left = left;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  sets the bottom pointer
 *******************************************************************************/
 void Space::setBottom(Space *&bottom)
 {
    this->bottom = bottom;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the location name
 *******************************************************************************/
 std::string Space::getLocationName()
 {
    return locName;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the top pointer
 *******************************************************************************/
 Space *Space::getTop()
 {
    return top;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the right pointer
 *******************************************************************************/
 Space *Space::getRight()
 {
    return right;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the left pointer
 *******************************************************************************/
 Space *Space::getLeft()
 {
    return left;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the bottom pointer
 *******************************************************************************/
 Space *Space::getBottom()
 {
    return bottom;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  adds k number of keys to the key value
 *******************************************************************************/
 void Space::setKey(int k)
 {
    key += k;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  sets the visa value for a space
 *******************************************************************************/
 void Space::setVisa(int visa)
 {
    this->visa = visa;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the key value for a space
 *******************************************************************************/
 int Space::getKey()
 {
    return key;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns the visa value for a space
 *******************************************************************************/
 int Space::getVisa()
 {
    return visa;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  default destructor
 *******************************************************************************/
-
-//void Space::buildTeam() {}
-
 Space::~Space() {}

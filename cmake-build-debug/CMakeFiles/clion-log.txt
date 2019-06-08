@@ -1,4 +1,4 @@
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/davidsan/162/rise-through-the-ranks
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/davidsan/osu/162/rise-through-the-ranks
 -- The C compiler identification is GNU 9.1.1
 -- The CXX compiler identification is GNU 9.1.1
 -- Check for working C compiler: /usr/lib64/ccache/cc
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug
+-- Build files have been written to: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug

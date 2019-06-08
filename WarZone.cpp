@@ -2,12 +2,14 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a derived class of the Space class.  This class
+**                provides a space for a territory where armies can fight each
+**                other.
 *******************************************************************************/
 
 #include "WarZone.hpp"
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default constructor
 *******************************************************************************/
 WarZone::WarZone()
 {
@@ -16,21 +18,22 @@ WarZone::WarZone()
    visa = 0;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Pure virtual function not used in this class
 *******************************************************************************/
 Fighter *WarZone::buyFighter(int choice, int &money)
 {
    return nullptr;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default destructor initiates function to delete memory allocated to enemy
+**  team
 *******************************************************************************/
 WarZone::~WarZone()
 {
    destroyTeam();
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Creates n fighters and adds them to the enemy team
 *******************************************************************************/
 void WarZone::buildTeam(int opponent)
 {
@@ -65,14 +68,14 @@ void WarZone::buildTeam(int opponent)
    }
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns a queue of fighter pointers
 *******************************************************************************/
 std::queue<Fighter *> *WarZone::getTeam()
 {
    return &enemy;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  destroys a team one node at a time
 *******************************************************************************/
 void WarZone::destroyTeam()
 {

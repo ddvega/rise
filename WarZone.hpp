@@ -2,7 +2,9 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a derived class of the Space class.  This class
+**                provides a space for a territory where armies can fight each
+**                other.
 *******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__WARZONE_HPP
@@ -22,8 +24,6 @@ public:
    Fighter *buyFighter(int choice, int &) override;
    std::queue<Fighter *> *getTeam() override;
    void destroyTeam();
-
-
 };
 
 #endif //RISE_THROUGH_THE_RANKS__WARZONE_HPP

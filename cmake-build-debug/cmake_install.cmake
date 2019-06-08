@@ -1,4 +1,4 @@
-# Install script for directory: /home/davidsan/162/rise-through-the-ranks
+# Install script for directory: /home/davidsan/osu/162/rise-through-the-ranks
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

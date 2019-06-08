@@ -2,7 +2,10 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a derived class of the Space class. The purpose of
+**                this class is to provide the user a space to have a final
+**                battle with the
+**                champion army.
 *******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__CHAMPIONS_HPP

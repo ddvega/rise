@@ -2,7 +2,8 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is the Game class responsible for grouping all of the
+**                game's functions and making them interact.
 *******************************************************************************/
 
 #ifndef RISE_THROUGH_THE_RANKS__GAME_HPP
@@ -22,17 +23,14 @@
 
 class Game
 {
-   struct backpack
+   struct backpack //container for users items
    {
       int cash, keys, visa;
    };
+
 protected:
    std::queue<Fighter *> userTeam;
    std::queue<Fighter *> *enemyFighters;
-   //int bank;
-   //int keys;
-   //int visa;
-   //std::vector<int> backpack;
    backpack items;
    Fighter *fighter;
    Space *locator;
@@ -58,6 +56,7 @@ public:
    void warSpace();
    void hitFirst(Fighter *one, Fighter *two, int pick);
    void fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy);
+   bool payEntry(int &);
    ~Game();
 
 };

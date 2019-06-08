@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/lib64/ccache/c++ 
@@ -23,30 +23,30 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9d52c/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_9d52c.dir/build.make CMakeFiles/cmTC_9d52c.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_9e1c3/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_9e1c3.dir/build.make CMakeFiles/cmTC_9e1c3.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9d52c.dir/testCCompiler.c.o
-/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_9d52c.dir/testCCompiler.c.o   -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_9d52c
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d52c.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_9d52c.dir/testCCompiler.c.o  -o cmTC_9d52c 
+Building C object CMakeFiles/cmTC_9e1c3.dir/testCCompiler.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_9e1c3.dir/testCCompiler.c.o   -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_9e1c3
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e1c3.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_9e1c3.dir/testCCompiler.c.o  -o cmTC_9e1c3 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_298e9/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_298e9.dir/build.make CMakeFiles/cmTC_298e9.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_09e08/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_09e08.dir/build.make CMakeFiles/cmTC_09e08.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o
-/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o   -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o
+/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o   -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -80,9 +80,9 @@ GNU assembler version 2.31.1 (x86_64-redhat-linux) using BFD version version 2.3
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_4f57f.dir/CMakeCCompilerABI.c.o' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_298e9
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_298e9.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o  -o cmTC_298e9 
+Linking C executable cmTC_09e08
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09e08.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o  -o cmTC_09e08 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper
@@ -94,9 +94,9 @@ Thread model: posix
 gcc version 9.1.1 20190503 (Red Hat 9.1.1-1) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_298e9' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvTL61q.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_298e9 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_298e9' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09e08' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9YR8Sr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_09e08 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09e08' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -115,13 +115,13 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_298e9/fast ]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_298e9.dir/build.make CMakeFiles/cmTC_298e9.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_09e08/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_09e08.dir/build.make CMakeFiles/cmTC_09e08.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o   -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o   -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -155,9 +155,9 @@ Parsed C implicit link information from above output:
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_4f57f.dir/CMakeCCompilerABI.c.o' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_298e9]
-  ignore line: [/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_298e9.dir/link.txt --verbose=1]
-  ignore line: [/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o  -o cmTC_298e9 ]
+  ignore line: [Linking C executable cmTC_09e08]
+  ignore line: [/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09e08.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/cc     -v CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o  -o cmTC_09e08 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper]
@@ -169,13 +169,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 9.1.1 20190503 (Red Hat 9.1.1-1) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_298e9' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvTL61q.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_298e9 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09e08' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9YR8Sr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_09e08 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvTL61q.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc9YR8Sr.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -190,7 +190,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_298e9] ==> ignore
+    arg [cmTC_09e08] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o] ==> ignore
@@ -199,7 +199,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/9/../../..]
-    arg [CMakeFiles/cmTC_298e9.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_09e08.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -226,16 +226,16 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_8b3f9/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_8b3f9.dir/build.make CMakeFiles/cmTC_8b3f9.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_bb9ae/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_bb9ae.dir/build.make CMakeFiles/cmTC_bb9ae.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8b3f9.dir/feature_tests.c.o
-/usr/lib64/ccache/cc   -std=c11 -o CMakeFiles/cmTC_8b3f9.dir/feature_tests.c.o   -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_8b3f9
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b3f9.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_8b3f9.dir/feature_tests.c.o  -o cmTC_8b3f9 
+Building C object CMakeFiles/cmTC_bb9ae.dir/feature_tests.c.o
+/usr/lib64/ccache/cc   -std=c11 -o CMakeFiles/cmTC_bb9ae.dir/feature_tests.c.o   -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_bb9ae
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb9ae.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_bb9ae.dir/feature_tests.c.o  -o cmTC_bb9ae 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -246,16 +246,16 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_343c0/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_343c0.dir/build.make CMakeFiles/cmTC_343c0.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_13f3e/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_13f3e.dir/build.make CMakeFiles/cmTC_13f3e.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_343c0.dir/feature_tests.c.o
-/usr/lib64/ccache/cc   -std=c99 -o CMakeFiles/cmTC_343c0.dir/feature_tests.c.o   -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_343c0
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_343c0.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_343c0.dir/feature_tests.c.o  -o cmTC_343c0 
+Building C object CMakeFiles/cmTC_13f3e.dir/feature_tests.c.o
+/usr/lib64/ccache/cc   -std=c99 -o CMakeFiles/cmTC_13f3e.dir/feature_tests.c.o   -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_13f3e
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13f3e.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_13f3e.dir/feature_tests.c.o  -o cmTC_13f3e 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -266,16 +266,16 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_58acd/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_58acd.dir/build.make CMakeFiles/cmTC_58acd.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_aaf66/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_aaf66.dir/build.make CMakeFiles/cmTC_aaf66.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_58acd.dir/feature_tests.c.o
-/usr/lib64/ccache/cc   -std=c90 -o CMakeFiles/cmTC_58acd.dir/feature_tests.c.o   -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_58acd
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58acd.dir/link.txt --verbose=1
-/usr/lib64/ccache/cc      CMakeFiles/cmTC_58acd.dir/feature_tests.c.o  -o cmTC_58acd 
+Building C object CMakeFiles/cmTC_aaf66.dir/feature_tests.c.o
+/usr/lib64/ccache/cc   -std=c90 -o CMakeFiles/cmTC_aaf66.dir/feature_tests.c.o   -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_aaf66
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaf66.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      CMakeFiles/cmTC_aaf66.dir/feature_tests.c.o  -o cmTC_aaf66 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -284,27 +284,27 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_814ff/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_814ff.dir/build.make CMakeFiles/cmTC_814ff.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_3053a/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_3053a.dir/build.make CMakeFiles/cmTC_3053a.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_814ff.dir/testCXXCompiler.cxx.o
-/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_814ff.dir/testCXXCompiler.cxx.o -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_814ff
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_814ff.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_814ff.dir/testCXXCompiler.cxx.o  -o cmTC_814ff 
+Building CXX object CMakeFiles/cmTC_3053a.dir/testCXXCompiler.cxx.o
+/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_3053a.dir/testCXXCompiler.cxx.o -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_3053a
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3053a.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_3053a.dir/testCXXCompiler.cxx.o  -o cmTC_3053a 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_0a700/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_0a700.dir/build.make CMakeFiles/cmTC_0a700.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_bf9e8/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_bf9e8.dir/build.make CMakeFiles/cmTC_bf9e8.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o
-/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o
+/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -341,9 +341,9 @@ GNU assembler version 2.31.1 (x86_64-redhat-linux) using BFD version version 2.3
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_77c86.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_0a700
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a700.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0a700 
+Linking CXX executable cmTC_bf9e8
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf9e8.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bf9e8 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper
@@ -355,9 +355,9 @@ Thread model: posix
 gcc version 9.1.1 20190503 (Red Hat 9.1.1-1) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0a700' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4vGNWZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0a700 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0a700' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bf9e8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cckykqTd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bf9e8 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bf9e8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -382,13 +382,13 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_0a700/fast ]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_0a700.dir/build.make CMakeFiles/cmTC_0a700.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_bf9e8/fast ]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_bf9e8.dir/build.make CMakeFiles/cmTC_bf9e8.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/lib64/ccache/c++    -v -o CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o -c /home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -425,9 +425,9 @@ Parsed CXX implicit link information from above output:
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-c' '-o' 'CMakeFiles/cmTC_77c86.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_0a700]
-  ignore line: [/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a700.dir/link.txt --verbose=1]
-  ignore line: [/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0a700 ]
+  ignore line: [Linking CXX executable cmTC_bf9e8]
+  ignore line: [/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf9e8.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/c++      -v CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bf9e8 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper]
@@ -439,13 +439,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 9.1.1 20190503 (Red Hat 9.1.1-1) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/9/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/9/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0a700' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4vGNWZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0a700 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bf9e8' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/9/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cckykqTd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_bf9e8 /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/9 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/9/../../.. CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/9/crtend.o /usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc4vGNWZ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cckykqTd.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -460,7 +460,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0a700] ==> ignore
+    arg [cmTC_bf9e8] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/9/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/9/crtbegin.o] ==> ignore
@@ -469,7 +469,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/9/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/9/../../..]
-    arg [CMakeFiles/cmTC_0a700.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_bf9e8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -492,16 +492,16 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_f1f4b/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_f1f4b.dir/build.make CMakeFiles/cmTC_f1f4b.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_7c0fb/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_7c0fb.dir/build.make CMakeFiles/cmTC_7c0fb.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f1f4b.dir/feature_tests.cxx.o
-/usr/lib64/ccache/c++    -std=c++2a -o CMakeFiles/cmTC_f1f4b.dir/feature_tests.cxx.o -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f1f4b
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1f4b.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_f1f4b.dir/feature_tests.cxx.o  -o cmTC_f1f4b 
+Building CXX object CMakeFiles/cmTC_7c0fb.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++2a -o CMakeFiles/cmTC_7c0fb.dir/feature_tests.cxx.o -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7c0fb
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c0fb.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_7c0fb.dir/feature_tests.cxx.o  -o cmTC_7c0fb 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -565,16 +565,16 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
 
 
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_2cebf/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_2cebf.dir/build.make CMakeFiles/cmTC_2cebf.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_611db/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_611db.dir/build.make CMakeFiles/cmTC_611db.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2cebf.dir/feature_tests.cxx.o
-/usr/lib64/ccache/c++    -std=c++17 -o CMakeFiles/cmTC_2cebf.dir/feature_tests.cxx.o -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2cebf
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cebf.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_2cebf.dir/feature_tests.cxx.o  -o cmTC_2cebf 
+Building CXX object CMakeFiles/cmTC_611db.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++17 -o CMakeFiles/cmTC_611db.dir/feature_tests.cxx.o -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_611db
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_611db.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_611db.dir/feature_tests.cxx.o  -o cmTC_611db 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -638,16 +638,16 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9d8cc/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_9d8cc.dir/build.make CMakeFiles/cmTC_9d8cc.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_f9dc1/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_f9dc1.dir/build.make CMakeFiles/cmTC_f9dc1.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9d8cc.dir/feature_tests.cxx.o
-/usr/lib64/ccache/c++    -std=c++14 -o CMakeFiles/cmTC_9d8cc.dir/feature_tests.cxx.o -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9d8cc
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d8cc.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_9d8cc.dir/feature_tests.cxx.o  -o cmTC_9d8cc 
+Building CXX object CMakeFiles/cmTC_f9dc1.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++14 -o CMakeFiles/cmTC_f9dc1.dir/feature_tests.cxx.o -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f9dc1
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9dc1.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_f9dc1.dir/feature_tests.cxx.o  -o cmTC_f9dc1 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -711,16 +711,16 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9f4e0/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_9f4e0.dir/build.make CMakeFiles/cmTC_9f4e0.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_450cb/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_450cb.dir/build.make CMakeFiles/cmTC_450cb.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9f4e0.dir/feature_tests.cxx.o
-/usr/lib64/ccache/c++    -std=c++11 -o CMakeFiles/cmTC_9f4e0.dir/feature_tests.cxx.o -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9f4e0
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f4e0.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_9f4e0.dir/feature_tests.cxx.o  -o cmTC_9f4e0 
+Building CXX object CMakeFiles/cmTC_450cb.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++11 -o CMakeFiles/cmTC_450cb.dir/feature_tests.cxx.o -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_450cb
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_450cb.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_450cb.dir/feature_tests.cxx.o  -o cmTC_450cb 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -784,16 +784,16 @@ gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_c59b0/fast 
-/usr/bin/gmake -f CMakeFiles/cmTC_c59b0.dir/build.make CMakeFiles/cmTC_c59b0.dir/build
+Run Build Command(s):/usr/bin/gmake cmTC_44e7f/fast 
+/usr/bin/gmake -f CMakeFiles/cmTC_44e7f.dir/build.make CMakeFiles/cmTC_44e7f.dir/build
 gmake[1]: Entering directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c59b0.dir/feature_tests.cxx.o
-/usr/lib64/ccache/c++    -std=c++98 -o CMakeFiles/cmTC_c59b0.dir/feature_tests.cxx.o -c /home/davidsan/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c59b0
-/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c59b0.dir/link.txt --verbose=1
-/usr/lib64/ccache/c++       CMakeFiles/cmTC_c59b0.dir/feature_tests.cxx.o  -o cmTC_c59b0 
+Building CXX object CMakeFiles/cmTC_44e7f.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++98 -o CMakeFiles/cmTC_44e7f.dir/feature_tests.cxx.o -c /home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_44e7f
+/home/davidsan/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44e7f.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       CMakeFiles/cmTC_44e7f.dir/feature_tests.cxx.o  -o cmTC_44e7f 
 gmake[1]: Leaving directory '/home/davidsan/osu/162/rise-through-the-ranks/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

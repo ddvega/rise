@@ -2,13 +2,16 @@
 ** Program:       Rise Project 4
 ** Author:        David Vega
 ** Date:          6/3/19
-** Description:
+** Description:   This is a derived class of the Space class. The purpose of
+**                this class is to provide the user a space to have a final
+**                battle with the
+**                champion army.
 *******************************************************************************/
 
 #include "Champions.hpp"
 
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default constructor
 *******************************************************************************/
 Champions::Champions()
 {
@@ -17,27 +20,28 @@ Champions::Champions()
    visa = 0;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Not used in this class, does nothing put return a nullpr
 *******************************************************************************/
 Fighter *Champions::buyFighter(int choice, int &money)
 {
    return nullptr;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default destructor initiates function to delete memory allocated to enemy
+**  team
 *******************************************************************************/
 Champions::~Champions()
 {
    destroyTeam();
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Creates n fighters and adds them to the enemy team
 *******************************************************************************/
 void Champions::buildTeam(int opponent)
 {
    for (int i = 0; i < opponent; i++)
    {
-      int point = rand() % 2 + 1;
+      int point = rand() % 5 + 1;
 
       if (point == 1)
       {
@@ -45,21 +49,30 @@ void Champions::buildTeam(int opponent)
          enemy.push(fighter);
          fighter = nullptr;
       }
-      else
+      else if (point == 2 || point == 3 || point == 4)
       {
          fighter = new Seal;
+         enemy.push(fighter);
+         fighter = nullptr;
+      }
+      else
+      {
+         fighter = new ChineseSOP;
          enemy.push(fighter);
          fighter = nullptr;
       }
    }
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  returns a queue of fighter pointers
 *******************************************************************************/
 std::queue<Fighter *> *Champions::getTeam()
 {
    return &enemy;
 }
+/*******************************************************************************
+**  destroys a team one node at a time
+*******************************************************************************/
 void Champions::destroyTeam()
 {
    //remove front node until the list is empty
