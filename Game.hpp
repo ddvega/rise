@@ -22,13 +22,18 @@
 
 class Game
 {
-
+   struct backpack
+   {
+      int cash, keys, visa;
+   };
 protected:
    std::queue<Fighter *> userTeam;
    std::queue<Fighter *> *enemyFighters;
-   int bank;
-   int keys;
-   int visa;
+   //int bank;
+   //int keys;
+   //int visa;
+   //std::vector<int> backpack;
+   backpack items;
    Fighter *fighter;
    Space *locator;
    Space *mercenaryShop;
