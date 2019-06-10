@@ -49,7 +49,6 @@ bool Game::payEntry(int &cBal)
             std::cout << "Bribe paid. Thank you" << std::endl;
          }
       }
-
    }
    else
    {
@@ -296,7 +295,6 @@ void Game::play()
    int choice = 1, enterRoom = 0;
    do
    {
-
       if (locator->getLocationName() == "War Shop" && enterRoom == 1)
       {
          clearScreen(60);
@@ -317,7 +315,6 @@ void Game::play()
             warSpace();
             std::cout << "Enter [c] to continue";
             getch("cC");
-
          }
          else
          {
@@ -409,15 +406,13 @@ void Game::play()
       {
          clearScreen(50);
          printCup();
-         for (int i = 0; i < 25; i++)
+         for (int i = 0; i < 10; i++)
          {
             std::cout << "CONGRATULATIONS!!! You are the new world champion"
                       << std::endl;
          }
-
          choice = 2;
       }
-
    }
    while (choice != 2);
 }
@@ -499,11 +494,10 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
                    << enemy.front()->getName()
                    << " "
                    << " Won after " << rounds << " rounds "
+
+                   << "\n------------------------------------------------------"
+                      "-------------------------"
                    << std::endl;
-         std::cout
-            << "------------------------------------------------------------"
-               "-------------------"
-            << std::endl;
 
          delete uTeam.front();//activate if you want to fight to death
          uTeam.pop(); //loser is removed from team1 stack
@@ -540,7 +534,6 @@ void Game::fight(std::queue<Fighter *> &uTeam, std::queue<Fighter *> enemy)
          rounds = 0;//reset rounds
          money += 10000;
       }
-
 
       //if either team is empty, check who has the most points and print winner
       if ((uTeam.empty() || enemy.empty()))
