@@ -1,5 +1,5 @@
 /*******************************************************************************
-** Program:       Fantasy Combat Tournament Project 4
+** Program:       Rise -- Final Project
 ** Author:        David Vega
 ** Date:          5/15/19
 ** Description:   Validation functions used to validate integers, doubles and

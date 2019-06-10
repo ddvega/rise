@@ -1,5 +1,5 @@
 /*******************************************************************************
-** Program:       Rise Project 4
+** Program:       Rise -- Final Project
 ** Author:        David Vega
 ** Date:          6/3/19
 ** Description:   This is a derived class of the Space class.  This class

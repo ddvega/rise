@@ -1,5 +1,5 @@
 /*******************************************************************************
-** Program:       Rise Project 4
+** Program:       Rise -- Final Project
 ** Author:        David Vega
 ** Date:          6/3/19
 ** Description:   This is a base class responsible for setting a fighter with

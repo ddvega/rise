@@ -1,5 +1,5 @@
 /*******************************************************************************
-** Program:       Rise Project 4
+** Program:       Rise -- Final Project
 ** Author:        David Vega
 ** Date:          6/3/19
 ** Description:   Validation functions used to validate integers, doubles and
