@@ -17,7 +17,7 @@ int main()
 {
    int key;
    srand(time(nullptr));
-   clearScreen(50);
+   clearScreen(60);
    std::cout << "Welcome to RISE"
                 "\n\nA series of circumstances have pushed you to the point of "
                 "desperation, \nand in the process, you've made powerful "
@@ -32,14 +32,12 @@ int main()
              << std::endl;
 
    std::cout << "\nEnter [p] to proceed";
-   key = getch("pq");
-   clearScreen(50);
-   std::cout << "\n\nEvery year the most powerful "
-                "gangs in"
+   key = getch("p");
+   clearScreen(60);
+   std::cout << "\n\nEvery year the most powerful gangs in"
                 " the world compete in a war \ntournament. Their smartest and "
-                "most "
-                "adept leaders, are sent to the world \nstage to lead a team of"
-                " mercenaries to fight other teams of mercenaries."
+                "most adept leaders, are sent to the world \nstage to lead a"
+                " team of mercenaries to fight other teams of mercenaries."
                 "\nYou're syndicate believes you can win and has invested "
                 "heavily in your \npreparation"
                 " and ticket to the tournament. Winning this tournament will "
@@ -56,7 +54,7 @@ int main()
 
    std::cout << "\nEnter [p] to proceed";
    key = getch("p");
-   clearScreen(50);
+   clearScreen(60);
    std::cout << "\nRules of Engagement"
                 "\n\nYou start with a cash balance. With that balance you'll"
                 "\nbe able to build your team of mercenaries by entering the"
