@@ -197,7 +197,7 @@ void Game::mShop()
                 << "\nTeam size: " << userTeam.size() << " warriors"
                 << "\n\n\nWelcome to the Mercenary Shop"
                 << "\n\nPlease select the fighter you want to hire"
-                << "\n1. GRU Spetsnaz Solder $10,000"
+                << "\n1. GRU Spetsnaz Soldier $10,000"
                 << "\n2. Chinese Special Operative $20,000"
                 << "\n3. SAS operative $ 50,000"
                 << "\n4. Navy Seal $100,000"
