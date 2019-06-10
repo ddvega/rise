@@ -24,9 +24,7 @@ public:
    Fighter *buyFighter(int choice, int &) override;
    void buildTeam(int opponent) override;
    std::queue<Fighter *> *getTeam() override;
-   void destroyTeam();
-
-
+   void destroyTeam() override;
 };
 
 #endif //RISE_THROUGH_THE_RANKS__CHAMPIONS_HPP

@@ -18,11 +18,6 @@
 
 int maxMinIntOnly(int, int);
 bool digitOnly(std::string);
-void startOrQuit();
 void clearScreen(int);
-void charOnly();
-std::string wordOnly();
-std::string wordOrDigit();
-void destroy2dArray(char **ptr, int size);
 int getch(std::string);
 #endif

@@ -19,7 +19,6 @@ ChineseSOP::ChineseSOP()
    strength = 25;
    killed = false;
 }
-
 /*******************************************************************************
 **  Returns a random number within range of the die. Die is used in attack.
 *******************************************************************************/
@@ -27,7 +26,6 @@ int ChineseSOP::attackDice()
 {
    return rand() % 20 + 1;
 }
-
 /*******************************************************************************
 **  Uses attackDice function to inflict damage on the opponent
 *******************************************************************************/
@@ -36,7 +34,6 @@ int ChineseSOP::attack()
    //Gru attacks with a 20 sided die
    return attackDice();
 }
-
 /*******************************************************************************
 **  Returns a random number within range of the die. Die is used in defense.
 *******************************************************************************/
@@ -44,7 +41,6 @@ int ChineseSOP::defendDice()
 {
    return rand() % 15 + 1;
 }
-
 /*******************************************************************************
 **  Uses defendDice to supress damage done by opponents attack.  Additional
  *  traits provide added protection.
@@ -78,7 +74,6 @@ void ChineseSOP::defend(int pain)
       killed = true;
    }
 }
-
 /*******************************************************************************
 **  Default destructor
 *******************************************************************************/

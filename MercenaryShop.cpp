@@ -9,7 +9,7 @@
 #include "MercenaryShop.hpp"
 
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default constructor
 *******************************************************************************/
 MercenaryShop::MercenaryShop()
 {
@@ -18,11 +18,10 @@ MercenaryShop::MercenaryShop()
    visa = 0;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Creates and returns a fighter and deducts cost from user cash balance
 *******************************************************************************/
 Fighter *MercenaryShop::buyFighter(int choice, int &money)
 {
-
    if (choice == 1)
    {
       money = 1000;
@@ -47,25 +46,24 @@ Fighter *MercenaryShop::buyFighter(int choice, int &money)
       Fighter *seal = new Seal;
       return seal;
    }
-
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Default destructor
 *******************************************************************************/
 MercenaryShop::~MercenaryShop() {}
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Pure virtual function not used in this class
 *******************************************************************************/
 void MercenaryShop::buildTeam(int opponent) {}
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Pure virtual function not used in this class
 *******************************************************************************/
 std::queue<Fighter *> *MercenaryShop::getTeam()
 {
    return nullptr;
 }
 /*******************************************************************************
-**  This function validates that digits and special characters are not used.
+**  Pure virtual function not used in this class
 *******************************************************************************/
 void MercenaryShop::destroyTeam() {}
 

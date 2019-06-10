@@ -27,9 +27,7 @@ public:
    Fighter *buyFighter(int choice, int &) override;
    ~MercenaryShop() override;
    std::queue<Fighter *> *getTeam() override;
-   void destroyTeam();
-
-
+   void destroyTeam() override;
 };
 
 #endif //RISE_THROUGH_THE_RANKS__MERCENARYSHOP_HPP

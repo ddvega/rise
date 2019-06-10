@@ -42,14 +42,12 @@ public:
    void setKey(int);
    void setVisa(int);
    int getVisa();
-
-   //getters
+   int getKey();
+   std::string getLocationName();
    Space *getTop();
    Space *getRight();
    Space *getLeft();
    Space *getBottom();
-   int getKey();
-   std::string getLocationName();
 
    //pure virtual functions overridden in derived classes
    virtual Fighter *buyFighter(int, int &) = 0;
